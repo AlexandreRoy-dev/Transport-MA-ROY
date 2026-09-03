@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Atkinson_Hyperlegible, Big_Shoulders_Display } from "next/font/google";
+import { Atkinson_Hyperlegible, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 
-const display = Big_Shoulders_Display({
+const display = Barlow_Condensed({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["500", "600", "700"],
@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     "Vente et location de conteneurs maritimes 20' et 40' en Estrie.",
 };
 
-export default async function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const locale = (await headers()).get("x-next-intl-locale") ?? "fr";
 
   return (

@@ -32,7 +32,7 @@
   },
   "home": {
     "heroTitle": "De l’espace solide, livré où vous en avez besoin.",
-    "heroLead": "Vente et location de conteneurs maritimes 20' et 40' — neufs ou usagers — pour l’entreposage, le chantier et la ferme, dans le grand Sherbrooke et l’Estrie.",
+    "heroLead": "Vente et location de conteneurs maritimes 20' et 40', neufs ou usagers, pour l’entreposage, le chantier et la ferme, dans le grand Sherbrooke et l’Estrie.",
     "heroPrimary": "Demander un devis",
     "heroSecondary": "Voir les formats",
     "offerTitle": "Ce que nous livrons",
@@ -59,7 +59,7 @@
     "step3Title": "Installer",
     "step3Body": "Cadenas, plancher, et vous rangez. L’espace cesse d’être un problème.",
     "trustTitle": "Une cour d’Estrie, pas un catalogue lointain.",
-    "trustBody": "On travaille le grand Sherbrooke et les routes qui en partent. Si le camion peut entrer, on parle. Les prix, les stocks et les délais se confirment au téléphone — rien n’est inventé ici.",
+    "trustBody": "On travaille le grand Sherbrooke et les routes qui en partent. Si le camion peut entrer, on parle. Les prix, les stocks et les délais se confirment au téléphone. Rien n’est inventé ici.",
     "trustLocal": "Livraison locale",
     "trustStock": "20' et 40' en cour",
     "trustBoth": "Vente et location",
@@ -74,7 +74,7 @@
     "saleBody": "Achetez un 20' ou un 40' et posez-le une fois. Utile pour l’entreposage permanent, un atelier, du matériel agricole ou des archives que vous ne voulez plus dans le bâtiment.",
     "salePoint1": "Neuf ou usager, selon le stock de la cour",
     "salePoint2": "Livraison comprise dans la discussion, pas comme une surprise",
-    "salePoint3": "Un bien que vous gardez — pas un abonnement",
+    "salePoint3": "Un bien que vous gardez, pas un abonnement",
     "rentTitle": "Location",
     "rentBody": "Gardez le terrain flexible. Un chantier, une rénovation, une saison de récolte: le conteneur arrive, sert, et repart.",
     "rentPoint1": "Durée calée sur votre projet",
@@ -89,7 +89,7 @@
   },
   "products": {
     "title": "L’acier, en deux mesures.",
-    "lead": "Conteneurs maritimes standards. Ce que vous voyez ici est le catalogue de formats — le stock du jour se confirme au devis.",
+    "lead": "Conteneurs maritimes standards. Ce que vous voyez ici est le catalogue de formats. Le stock du jour se confirme au devis.",
     "size20Title": "20 pieds",
     "size20Body": "Environ 6 mètres. Passe dans plus de cours. Suffit pour un atelier, des outils, un inventaire de saison.",
     "size20Spec": "Emprise courte · volume utile pour un usage serré",
@@ -132,7 +132,7 @@
     "region": "Grand Sherbrooke et Estrie",
     "hoursLabel": "Heures (à confirmer)",
     "hours": "Lundi au vendredi, journée",
-    "placeholderNote": "Coordonnées provisoires — à remplacer par les vraies.",
+    "placeholderNote": "Coordonnées provisoires, à remplacer par les vraies.",
     "formTitle": "Demande de devis",
     "name": "Nom",
     "namePlaceholder": "Votre nom",
@@ -155,7 +155,7 @@
     "sentBody": "Si rien ne s’ouvre, copiez le message et écrivez-nous à {email}.",
     "errorRequired": "Remplissez le nom, le courriel et le message.",
     "errorEmail": "Entrez un courriel valide.",
-    "subject": "Demande de devis — Transport M-A Roy"
+    "subject": "Demande de devis : Transport M-A Roy"
   },
   "privacy": {
     "title": "Confidentialité",

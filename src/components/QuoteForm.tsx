@@ -33,7 +33,7 @@ export function QuoteForm() {
     const body = [
       `${t("name")}: ${name}`,
       `${t("emailField")}: ${email}`,
-      `${t("phoneField")}: ${phone || "—"}`,
+      `${t("phoneField")}: ${phone || "-"}`,
       `${t("size")}: ${size}`,
       `${t("intent")}: ${intent}`,
       "",

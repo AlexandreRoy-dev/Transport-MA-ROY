@@ -56,7 +56,7 @@ export function Reveal({
 
   return (
     <Tag
-      ref={(node) => {
+      ref={(node: HTMLElement | null) => {
         ref.current = node;
       }}
       data-pending={pending && !inView ? "true" : "false"}

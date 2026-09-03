@@ -14,7 +14,7 @@ export async function pageMeta(
   const descriptionKey = `${key}Description` as const;
 
   return {
-    title: `${t(titleKey)} · ${t("siteName")}`,
+    title: t(titleKey),
     description: t(descriptionKey),
   };
 }
