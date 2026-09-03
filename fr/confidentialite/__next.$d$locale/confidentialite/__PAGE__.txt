@@ -1,0 +1,20 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+7:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+8:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+9:I[27201,["/_next/static/chunks/3fntmmi971322.js"],"IconMark"]
+b:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+c:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+6:X
+e:X
+e:C
+0:{"buildId":"B45VPb9nBlAX3-3Gv50cZ","data":[{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"site-grid max-w-3xl py-20 md:py-28","children":[["$","h1",null,{"className":"text-[clamp(2.8rem,6vw,4.8rem)] uppercase","children":"Confidentialité"}],["$","p",null,{"className":"mt-4 text-sm text-steel","children":"Texte provisoire, à valider avec un conseiller."}],["$","div",null,{"className":"mt-10 space-y-8 text-dust","children":[["$","p",null,{"children":"Transport M-A Roy inc. recueille seulement ce que vous envoyez pour un devis ou une question: nom, courriel, téléphone, et le contenu de votre message."}],["$","section",null,{"children":[["$","h2",null,{"className":"font-display text-3xl uppercase text-paper","children":"Utilisation"}],["$","p",null,{"className":"mt-3","children":"Ces renseignements servent à vous répondre et à préparer une offre. Ils ne sont pas vendus. Ils ne sont pas utilisés pour de la publicité ciblée."}]]}],["$","section",null,{"children":[["$","h2",null,{"className":"font-display text-3xl uppercase text-paper","children":"Conservation"}],["$","p",null,{"className":"mt-3","children":"On garde une demande le temps de la traiter, puis selon ce que la Loi 25 et nos obligations comptables exigent. Vous pouvez demander l’accès, la correction ou la suppression en nous écrivant."}]]}],["$","section",null,{"children":[["$","h2",null,{"className":"font-display text-3xl uppercase text-paper","children":"Vos droits (Québec)"}],["$","p",null,{"className":"mt-3","children":"La Loi 25 vous permet de savoir ce que nous détenons sur vous et d’en demander la correction. Contactez-nous aux coordonnées de la page Contact."}]]}],["$","section",null,{"children":[["$","h2",null,{"className":"font-display text-3xl uppercase text-paper","children":"Tiers"}],["$","p",null,{"className":"mt-3","children":"Un courriel peut transiter par votre fournisseur et le nôtre. Ce site n’embarque pas de pixel publicitaire. Si un hébergeur ou un outil de formulaires est ajouté plus tard, cette page sera mise à jour."}]]}]]}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":"$@5","staleTime":"$6","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L7",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L8",null,{"children":["$","$3",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Confidentialité | Transport M-A Roy"}],["$","meta","1",{"name":"description","content":"Comment Transport M-A Roy traite vos renseignements personnels."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L9","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@a","staleTime":"$6","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@d","staleTime":"$6","varyParams":"$e"}],"isUpgradeableISRFallback":false,"a":"$@f","rootVaryParams":null,"needsRuntimeRequest":"$@10"}
+4:null
+10:true
+6:300
+6:C
+f:0
+a:"$undefined"
+d:"$undefined"
+5:"$undefined"

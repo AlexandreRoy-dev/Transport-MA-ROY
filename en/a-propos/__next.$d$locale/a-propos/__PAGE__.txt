@@ -1,0 +1,23 @@
+1:"$Sreact.fragment"
+2:I[5500,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1kbm8uwioqixr.js","/_next/static/chunks/0zmvyptk783y8.js","/_next/static/chunks/1dp4rwqq7i6r8.js"],"Image"]
+3:I[96199,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1kbm8uwioqixr.js","/_next/static/chunks/0zmvyptk783y8.js","/_next/static/chunks/1dp4rwqq7i6r8.js"],"Reveal"]
+4:I[77105,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1kbm8uwioqixr.js","/_next/static/chunks/0zmvyptk783y8.js","/_next/static/chunks/1dp4rwqq7i6r8.js"],"default"]
+5:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+a:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+b:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+c:I[27201,["/_next/static/chunks/3fntmmi971322.js"],"IconMark"]
+e:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+f:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+9:X
+11:X
+11:C
+0:{"buildId":"B45VPb9nBlAX3-3Gv50cZ","data":[{"rsc":["$","$1","c",{"children":[[["$","section",null,{"className":"site-grid py-20 md:py-28","children":[["$","h1",null,{"className":"max-w-[16ch] text-[clamp(2.8rem,7vw,5.6rem)] uppercase","children":"A local yard for boxes that stay put."}],["$","p",null,{"className":"measure mt-6 text-lg text-dust","children":"Transport M-A Roy inc. sells and rents shipping containers from Sherbrooke. Not long-haul freight. Not roll-off waste bins. Closed steel, delivered to you."}]]}],["$","div",null,{"className":"relative h-[46vw] min-h-64 max-h-[480px]","children":["$","$L2",null,{"src":"/media/hero-yard.jpg","alt":"","fill":true,"className":"object-cover object-bottom","sizes":"100vw","priority":true}]}],["$","section",null,{"className":"site-grid grid gap-14 py-20 md:grid-cols-3","children":[["$","$L3",null,{"children":[["$","h2",null,{"className":"font-display text-3xl uppercase","children":"Why this exists"}],["$","p",null,{"className":"mt-4 text-dust","children":"When space runs out, people jam the garage, rent a room that costs too much, or leave gear in the weather. A 20' or 40' container fixes that without a building. We handle the size, the condition, and the truck that sets it down."}]]}],["$","$L3",null,{"delay":0.3,"children":[["$","h2",null,{"className":"font-display text-3xl uppercase","children":"Townships first"}],["$","p",null,{"className":"mt-4 text-dust","children":"Greater Sherbrooke, Magog, the rangs and industrial parks around them. Farther out, say so: we will answer yes or no, plainly."}]]}],["$","$L3",null,{"delay":0.6,"children":[["$","h2",null,{"className":"font-display text-3xl uppercase","children":"What we will not promise early"}],["$","p",null,{"className":"mt-4 text-dust","children":"Stock moves. A new 40' HC is not always in the yard. An honest quote beats a page that invents counts."}]]}]]}],["$","section",null,{"className":"bg-corten","children":["$","div",null,{"className":"site-grid py-16","children":["$","$L4",null,{"href":"/en/contact","localeCookie":{"name":"NEXT_LOCALE","sameSite":"lax"},"className":"inline-flex min-h-12 items-center px-6 text-[0.8rem] font-semibold tracking-[0.14em] uppercase transition-colors duration-200 bg-corten text-paper-hot hover:bg-corten-deep","children":"Write to us"}]}]}]],[["$","script","script-0",{"src":"/_next/static/chunks/1dp4rwqq7i6r8.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":"$@8","staleTime":"$9","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$La",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"About | Transport M-A Roy"}],["$","meta","1",{"name":"description","content":"An Eastern Townships company for shipping containers used as storage and site lockup."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$Lc","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@d","staleTime":"$9","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}]}]]}],"isPartial":"$@10","staleTime":"$9","varyParams":"$11"}],"isUpgradeableISRFallback":false,"a":"$@12","rootVaryParams":null,"needsRuntimeRequest":"$@13"}
+7:null
+13:true
+9:300
+9:C
+12:0
+d:"$undefined"
+10:"$undefined"
+8:"$undefined"
