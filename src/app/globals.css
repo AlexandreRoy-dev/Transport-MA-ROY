@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #14120f;
+  --ink-soft: #2a261f;
+  --paper: #e7dcc8;
+  --paper-hot: #f3ead8;
+  --steel: #8d8778;
+  --corten: #a8431f;
+  --corten-deep: #7c2d12;
+  --dust: #c4b49a;
+  --line: #3b352c;
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-hot: var(--paper-hot);
+  --color-steel: var(--steel);
+  --color-corten: var(--corten);
+  --color-corten-deep: var(--corten-deep);
+  --color-dust: var(--dust);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html,
+body {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+body {
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  font-size: clamp(1.05rem, 0.96rem + 0.4vw, 1.2rem);
+  line-height: 1.55;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), "Arial Narrow", sans-serif;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--corten);
+  color: var(--paper-hot);
+}
+
+:focus-visible {
+  outline: 2px solid var(--corten);
+  outline-offset: 3px;
+}
+
+a[href],
+button {
+  cursor: pointer;
+}
+
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal[data-pending="true"] {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .reveal.is-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.7s var(--ease-out),
+      transform 0.7s var(--ease-out);
+  }
+}
+
+.measure {
+  max-width: 38rem;
+}
+
+.site-grid {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .site-grid {
+    width: min(1180px, calc(100% - 4rem));
+  }
+}
