@@ -24,18 +24,28 @@ export default async function ProductsPage({
       body: t("size20Body"),
       spec: t("size20Spec"),
       mark: "20'",
+      image: "/media/yard-16.jpg",
     },
     {
       title: t("size40Title"),
       body: t("size40Body"),
       spec: t("size40Spec"),
       mark: "40'",
+      image: "/media/yard-11.jpg",
     },
     {
       title: t("sizeHcTitle"),
       body: t("sizeHcBody"),
       spec: t("sizeHcSpec"),
       mark: "HC",
+      image: "/media/yard-27.jpg",
+    },
+    {
+      title: t("sizeReeferTitle"),
+      body: t("sizeReeferBody"),
+      spec: t("sizeReeferSpec"),
+      mark: "RF",
+      image: "/media/yard-13.jpg",
     },
   ];
 
@@ -48,19 +58,30 @@ export default async function ProductsPage({
         <p className="measure mt-6 text-dust">{t("lead")}</p>
       </section>
 
-      <section className="site-grid grid gap-6 pb-16 md:grid-cols-3">
+      <section className="site-grid grid gap-6 pb-16 md:grid-cols-2">
         {sizes.map((size, index) => (
           <Reveal
             key={size.title}
-            delay={index * 0.3}
-            className="border border-line bg-ink-soft p-7"
+            delay={(index % 2) * 0.2}
+            className="overflow-hidden border border-line bg-ink-soft"
           >
-            <p className="font-display text-6xl text-corten">{size.mark}</p>
-            <h2 className="mt-4 font-display text-3xl uppercase">{size.title}</h2>
-            <p className="mt-3 text-dust">{size.body}</p>
-            <p className="mt-6 text-sm tracking-[0.08em] uppercase text-steel">
-              {size.spec}
-            </p>
+            <div className="relative aspect-[16/10]">
+              <Image
+                src={size.image}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 50vw, 100vw"
+              />
+            </div>
+            <div className="p-7">
+              <p className="font-display text-6xl text-corten">{size.mark}</p>
+              <h2 className="mt-4 font-display text-3xl uppercase">{size.title}</h2>
+              <p className="mt-3 text-dust">{size.body}</p>
+              <p className="mt-6 text-sm tracking-[0.08em] uppercase text-steel">
+                {size.spec}
+              </p>
+            </div>
           </Reveal>
         ))}
       </section>
@@ -68,7 +89,7 @@ export default async function ProductsPage({
       <section className="grid md:grid-cols-2">
         <div className="relative min-h-[300px]">
           <Image
-            src="/media/container-40.jpg"
+            src="/media/yard-46.jpg"
             alt=""
             fill
             className="object-cover"
@@ -87,6 +108,10 @@ export default async function ProductsPage({
             <div>
               <h3 className="font-display text-2xl uppercase">{t("usedTitle")}</h3>
               <p className="mt-2 text-ink-soft">{t("usedBody")}</p>
+            </div>
+            <div>
+              <h3 className="font-display text-2xl uppercase">{t("modifiedTitle")}</h3>
+              <p className="mt-2 text-ink-soft">{t("modifiedBody")}</p>
             </div>
           </div>
         </div>

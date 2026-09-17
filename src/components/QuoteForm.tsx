@@ -110,6 +110,7 @@ export function QuoteForm() {
             <option>{t("size20")}</option>
             <option>{t("size40")}</option>
             <option>{t("sizeHc")}</option>
+            <option>{t("sizeReefer")}</option>
             <option>{t("sizeUnsure")}</option>
           </select>
         </label>
@@ -125,6 +126,10 @@ export function QuoteForm() {
           <label className="inline-flex min-h-11 items-center gap-2 text-paper">
             <input type="radio" name="intent" value={t("intentRent")} />
             {t("intentRent")}
+          </label>
+          <label className="inline-flex min-h-11 items-center gap-2 text-paper">
+            <input type="radio" name="intent" value={t("intentModify")} />
+            {t("intentModify")}
           </label>
         </div>
       </fieldset>

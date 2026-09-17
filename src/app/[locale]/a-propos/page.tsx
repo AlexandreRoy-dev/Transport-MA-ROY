@@ -29,13 +29,34 @@ export default async function AboutPage({
 
       <div className="relative h-[46vw] min-h-64 max-h-[480px]">
         <Image
-          src="/media/hero-yard.jpg"
+          src="/media/yard-45.jpg"
           alt=""
           fill
           className="object-cover object-bottom"
           sizes="100vw"
           priority
         />
+      </div>
+
+      <div className="grid md:grid-cols-2">
+        <div className="relative min-h-[240px]">
+          <Image
+            src="/media/yard-27.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 50vw, 100vw"
+          />
+        </div>
+        <div className="relative min-h-[240px]">
+          <Image
+            src="/media/yard-36.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 50vw, 100vw"
+          />
+        </div>
       </div>
 
       <section className="site-grid grid gap-14 py-20 md:grid-cols-3">

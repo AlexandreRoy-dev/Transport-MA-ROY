@@ -27,7 +27,7 @@ export default async function ContactPage({
               {t("phoneLabel")}
             </dt>
             <dd className="mt-1 text-xl text-paper">
-              <a href={`tel:${t("phone").replace(/\s/g, "")}`}>{t("phone")}</a>
+              <a href={`tel:${t("phone").replace(/\D/g, "")}`}>{t("phone")}</a>
             </dd>
           </div>
           <div>
@@ -50,8 +50,13 @@ export default async function ContactPage({
             </dt>
             <dd className="mt-1 text-paper">{t("hours")}</dd>
           </div>
+          <div>
+            <dt className="text-[0.72rem] tracking-[0.16em] uppercase text-steel">
+              {t("directorLabel")}
+            </dt>
+            <dd className="mt-1 text-paper">{t("director")}</dd>
+          </div>
         </dl>
-        <p className="mt-8 text-sm text-steel">{t("placeholderNote")}</p>
       </div>
       <div className="md:col-span-7">
         <QuoteForm />

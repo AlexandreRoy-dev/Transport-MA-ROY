@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CtaLink } from "@/components/CtaLink";
+import { PhotoGrid } from "@/components/PhotoGrid";
 import { Reveal } from "@/components/Reveal";
 import type { AppLocale } from "@/i18n/routing";
 import { pageMeta } from "@/lib/metadata";
@@ -22,7 +23,7 @@ export default async function HomePage({
     <>
       <section className="relative min-h-[88vh] overflow-hidden">
         <Image
-          src="/media/hero-yard.jpg"
+          src="/media/yard-08.jpg"
           alt=""
           fill
           priority
@@ -68,7 +69,7 @@ export default async function HomePage({
 
       <section className="relative overflow-hidden">
         <Image
-          src="/media/steel-rib.jpg"
+          src="/media/yard-04.jpg"
           alt=""
           fill
           className="object-cover opacity-30"
@@ -133,10 +134,10 @@ export default async function HomePage({
       <section className="grid md:grid-cols-2">
         <div className="relative min-h-[320px]">
           <Image
-            src="/media/delivery.jpg"
+            src="/media/yard-38.jpg"
             alt=""
             fill
-            className="object-cover"
+            className="object-cover object-[30%_center]"
             sizes="(min-width: 768px) 50vw, 100vw"
           />
         </div>
@@ -152,6 +153,8 @@ export default async function HomePage({
           </Reveal>
         </div>
       </section>
+
+      <PhotoGrid />
 
       <section className="bg-paper text-ink">
         <div className="site-grid flex flex-col items-start gap-6 py-20 md:py-28">

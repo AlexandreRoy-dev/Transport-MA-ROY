@@ -34,6 +34,11 @@ export default async function ServicesPage({
       body: t("deliverBody"),
       points: [t("deliverPoint1"), t("deliverPoint2"), t("deliverPoint3")],
     },
+    {
+      title: t("modifyTitle"),
+      body: t("modifyBody"),
+      points: [t("modifyPoint1"), t("modifyPoint2"), t("modifyPoint3")],
+    },
   ];
 
   return (
@@ -47,7 +52,7 @@ export default async function ServicesPage({
 
       <div className="relative h-[42vw] min-h-56 max-h-[420px]">
         <Image
-          src="/media/delivery.jpg"
+          src="/media/yard-38.jpg"
           alt=""
           fill
           className="object-cover"
