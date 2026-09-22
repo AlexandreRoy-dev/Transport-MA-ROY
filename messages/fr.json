@@ -190,7 +190,9 @@
     "legal": "Mentions",
     "privacy": "Confidentialité",
     "replace": "Marc-André Roy, dir. · 819 578-3441",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "credit": "Site par",
+    "creditName": "Roy Marketing"
   },
   "gallery": {
     "title": "Photos des installations et des livraisons",

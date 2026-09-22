@@ -64,8 +64,18 @@ export async function Footer() {
           <p className="mt-6 text-sm text-steel">{t("replace")}</p>
         </div>
       </div>
-      <div className="site-grid border-t border-line py-5 text-sm text-steel">
-        © {year} Transport M-A Roy inc. {t("rights")}
+      <div className="site-grid flex flex-col gap-2 border-t border-line py-5 text-sm text-steel sm:flex-row sm:items-center sm:justify-between">
+        <p>© {year} Transport M-A Roy inc. {t("rights")}</p>
+        <p>
+          {t("credit")}{" "}
+          <a
+            href="https://roymarketing.ca/"
+            className="text-paper hover:text-dust"
+            rel="noopener noreferrer"
+          >
+            {t("creditName")}
+          </a>
+        </p>
       </div>
     </footer>
   );
