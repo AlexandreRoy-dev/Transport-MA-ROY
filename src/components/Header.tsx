@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useState } from "react";
 import { useTranslations } from "next-intl";
+import { CallButton } from "@/components/CallButton";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Wordmark } from "./Wordmark";
@@ -61,12 +62,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
-          <Link
-            href="/contact"
-            className="inline-flex min-h-11 items-center bg-corten px-4 text-[0.78rem] font-semibold tracking-[0.14em] uppercase text-paper-hot transition-colors duration-200 hover:bg-corten-deep"
-          >
-            {t("quote")}
-          </Link>
+          <CallButton size="sm" />
         </div>
 
         <button
@@ -103,12 +99,7 @@ export function Header() {
           </nav>
           <div className="mt-6 flex items-center justify-between">
             <LanguageSwitcher />
-            <Link
-              href="/contact"
-              className="inline-flex min-h-11 items-center bg-corten px-4 text-[0.78rem] font-semibold tracking-[0.14em] uppercase text-paper-hot"
-            >
-              {t("quote")}
-            </Link>
+            <CallButton size="sm" />
           </div>
         </div>
       ) : null}

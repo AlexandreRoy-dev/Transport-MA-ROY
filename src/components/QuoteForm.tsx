@@ -109,7 +109,7 @@ export function QuoteForm() {
           <select name="size" className={field} defaultValue={t("sizeUnsure")}>
             <option>{t("size20")}</option>
             <option>{t("size40")}</option>
-            <option>{t("sizeHc")}</option>
+            <option>{t("sizeSide")}</option>
             <option>{t("sizeReefer")}</option>
             <option>{t("sizeUnsure")}</option>
           </select>
@@ -153,7 +153,7 @@ export function QuoteForm() {
 
       <button
         type="submit"
-        className="mt-6 inline-flex min-h-12 items-center bg-corten px-6 text-[0.8rem] font-semibold tracking-[0.14em] uppercase text-paper-hot transition-colors duration-200 hover:bg-corten-deep"
+        className="mt-6 inline-flex min-h-12 items-center bg-corten px-6 text-[0.8rem] font-semibold tracking-[0.14em] uppercase text-white transition-colors duration-200 hover:bg-corten-deep"
       >
         {t("submit")}
       </button>

@@ -17,7 +17,7 @@ export default async function PrivacyPage({
 
   return (
     <article className="site-grid max-w-3xl py-20 md:py-28">
-      <h1 className="text-[clamp(2.8rem,6vw,4.8rem)] uppercase">{t("title")}</h1>
+      <h1 className="text-[clamp(2.6rem,6vw,4.4rem)] uppercase">{t("title")}</h1>
       <p className="mt-4 text-sm text-steel">{t("updated")}</p>
       <div className="mt-10 space-y-8 text-dust">
         <p>{t("intro")}</p>
