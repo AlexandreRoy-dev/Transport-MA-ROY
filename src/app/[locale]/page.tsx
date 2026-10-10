@@ -47,6 +47,9 @@ export default async function HomePage({
           <div className="max-w-[34rem] md:max-w-[40%]">
             <p className="text-[0.75rem] font-semibold tracking-[0.16em] uppercase text-[#e0875f]">{t("heroKicker")}</p>
             <h1 className="mt-2 text-[clamp(2.3rem,5.6vw,4.8rem)] uppercase">{t("heroTitle")}</h1>
+            <p className="mt-3 max-w-[36rem] text-[0.98rem] leading-snug text-balance text-white/90">
+              {t("heroPlace")}
+            </p>
             <div className="mt-5 flex flex-wrap gap-3 md:order-last">
               <CallButton />
             </div>

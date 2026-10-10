@@ -22,10 +22,29 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const localBusinessLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Transport M-A Roy inc.",
+    url: "https://transport.roymarketing.ca",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Route 108",
+      addressLocality: "Cookshire-Eaton",
+      addressRegion: "QC",
+      addressCountry: "CA",
+    },
+  };
 
   return (
     <NextIntlClientProvider messages={messages}>
       <HtmlLang locale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
