@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { CtaLink } from "@/components/CtaLink";
+import { CallButton } from "@/components/CallButton";
 import { Reveal } from "@/components/Reveal";
 import type { AppLocale } from "@/i18n/routing";
 import { pageMeta } from "@/lib/metadata";
+import { CARD_40_IMG } from "@/lib/images";
 
 export async function generateMetadata() {
   return pageMeta("products");
@@ -24,21 +25,21 @@ export default async function ProductsPage({
       body: t("size20Body"),
       spec: t("size20Spec"),
       mark: "20'",
-      image: "/media/yard-16.jpg",
+      image: "/media/conteneurs-20-pieds-cour-entreposage-800.webp",
     },
     {
       title: t("size40Title"),
       body: t("size40Body"),
       spec: t("size40Spec"),
       mark: "40'",
-      image: "/media/yard-11.jpg",
+      image: CARD_40_IMG,
     },
     {
-      title: t("sizeHcTitle"),
-      body: t("sizeHcBody"),
-      spec: t("sizeHcSpec"),
-      mark: "HC",
-      image: "/media/yard-27.jpg",
+      title: t("sizeSideTitle"),
+      body: t("sizeSideBody"),
+      spec: t("sizeSideSpec"),
+      mark: "40'",
+      image: "/media/conteneur-40-pieds-portes-laterales-noir-1600.webp",
     },
     {
       title: t("sizeReeferTitle"),
@@ -52,35 +53,39 @@ export default async function ProductsPage({
   return (
     <>
       <section className="site-grid py-20 md:py-28">
-        <h1 className="max-w-[12ch] text-[clamp(3rem,8vw,6.2rem)] uppercase">
+        <h1 className="max-w-[12ch] text-[clamp(2.6rem,6vw,4.4rem)] uppercase">
           {t("title")}
         </h1>
         <p className="measure mt-6 text-dust">{t("lead")}</p>
       </section>
 
-      <section className="site-grid grid gap-6 pb-16 md:grid-cols-2">
+      <section className="site-grid grid gap-6 pb-20 md:grid-cols-2">
         {sizes.map((size, index) => (
           <Reveal
             key={size.title}
             delay={(index % 2) * 0.2}
-            className="overflow-hidden border border-line bg-ink-soft"
+            className="plate flex flex-col"
           >
             <div className="relative aspect-[16/10]">
               <Image
                 src={size.image}
-                alt=""
+                alt={size.title}
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
-            <div className="p-7">
-              <p className="font-display text-6xl text-corten">{size.mark}</p>
+            <div className="plate-body">
+              <p className="stencil text-7xl text-corten">{size.mark}</p>
               <h2 className="mt-4 font-display text-3xl uppercase">{size.title}</h2>
               <p className="mt-3 text-dust">{size.body}</p>
               <p className="mt-6 text-sm tracking-[0.08em] uppercase text-steel">
                 {size.spec}
               </p>
+              {/* SPECS: confirmed dimensions go here. Product schema (JSON-LD) to be added with them. */}
+              <div className="mt-6 flex flex-wrap gap-3">
+                <CallButton />
+              </div>
             </div>
           </Reveal>
         ))}
@@ -97,7 +102,7 @@ export default async function ProductsPage({
           />
         </div>
         <div className="bg-paper px-6 py-16 text-ink md:px-12">
-          <h2 className="font-display text-[clamp(2.2rem,4vw,3.6rem)] uppercase">
+          <h2 className="font-display text-[clamp(2rem,4vw,3.2rem)] uppercase">
             {t("conditionTitle")}
           </h2>
           <div className="mt-8 grid gap-8">
@@ -117,18 +122,18 @@ export default async function ProductsPage({
         </div>
       </section>
 
-      <section className="bg-ink">
+      <section className="bg-[#0f0e0c] text-white">
         <div className="site-grid py-20">
-          <h2 className="font-display text-[clamp(2rem,4vw,3.4rem)] uppercase">
+          <h2 className="font-display text-[clamp(2rem,4vw,3.2rem)] uppercase">
             {t("usesTitle")}
           </h2>
           <ul className="mt-8 grid gap-4 md:grid-cols-3">
-            <li className="border-t border-line pt-4 text-dust">{t("useStorage")}</li>
-            <li className="border-t border-line pt-4 text-dust">{t("useSite")}</li>
-            <li className="border-t border-line pt-4 text-dust">{t("useFarm")}</li>
+            <li className="border-t-2 border-corten pt-4 text-white/80">{t("useStorage")}</li>
+            <li className="border-t-2 border-corten pt-4 text-white/80">{t("useSite")}</li>
+            <li className="border-t-2 border-corten pt-4 text-white/80">{t("useFarm")}</li>
           </ul>
           <div className="mt-12">
-            <CtaLink href="/contact">{t("cta")}</CtaLink>
+            <CallButton />
           </div>
         </div>
       </section>

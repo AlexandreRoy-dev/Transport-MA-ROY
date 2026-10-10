@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { CtaLink } from "@/components/CtaLink";
+import { CallButton } from "@/components/CallButton";
 import { Reveal } from "@/components/Reveal";
 import type { AppLocale } from "@/i18n/routing";
 import { pageMeta } from "@/lib/metadata";
@@ -21,7 +21,7 @@ export default async function AboutPage({
   return (
     <>
       <section className="site-grid py-20 md:py-28">
-        <h1 className="max-w-[16ch] text-[clamp(2.8rem,7vw,5.6rem)] uppercase">
+        <h1 className="max-w-[16ch] text-[clamp(2.6rem,6vw,4.4rem)] uppercase">
           {t("title")}
         </h1>
         <p className="measure mt-6 text-lg text-dust">{t("lead")}</p>
@@ -76,7 +76,7 @@ export default async function AboutPage({
 
       <section className="bg-corten">
         <div className="site-grid py-16">
-          <CtaLink href="/contact">{t("cta")}</CtaLink>
+          <CallButton />
         </div>
       </section>
     </>

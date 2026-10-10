@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #14120f;
-  --ink-soft: #2a261f;
-  --paper: #e7dcc8;
-  --paper-hot: #f3ead8;
-  --steel: #8d8778;
+  /* v2 light industrial palette. Token names kept: "ink" = page background, "paper" = main text. */
+  --ink: #f6f5f2;
+  --ink-soft: #ffffff;
+  --paper: #17150f;
+  --paper-hot: #1e1b16;
+  --steel: #77726a;
   --corten: #a8431f;
   --corten-deep: #7c2d12;
-  --dust: #c4b49a;
-  --line: #3b352c;
+  --dust: #57534b;
+  --line: #e2dfd8;
   --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -49,8 +50,8 @@ h2,
 h3,
 .font-display {
   font-family: var(--font-display), "Arial Narrow", sans-serif;
-  letter-spacing: -0.025em;
-  line-height: 0.95;
+  letter-spacing: -0.01em;
+  line-height: 1;
   text-wrap: balance;
 }
 
@@ -115,3 +116,9 @@ button {
     width: min(1180px, calc(100% - 4rem));
   }
 }
+
+/* v2: simple product cards */
+.plate { background: #fff; }
+.plate-body { padding: 1.5rem 1.5rem 1.75rem; }
+.stencil { font-family: var(--font-display), "Arial Narrow", sans-serif; line-height: 1; letter-spacing: 0.02em; }
+.on-dark { color: #fff; }

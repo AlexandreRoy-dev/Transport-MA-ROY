@@ -1,14 +1,17 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CtaLink } from "@/components/CtaLink";
+import { CallButton } from "@/components/CallButton";
 import { PhotoGrid } from "@/components/PhotoGrid";
-import { Reveal } from "@/components/Reveal";
 import type { AppLocale } from "@/i18n/routing";
 import { pageMeta } from "@/lib/metadata";
+import { CARD_40_IMG } from "@/lib/images";
 
 export async function generateMetadata() {
   return pageMeta("home");
 }
+
+const HERO_IMG = "/media/hero-conteneur-40-pieds-vert-ovl-sans-logo-1284.webp";
 
 export default async function HomePage({
   params,
@@ -18,155 +21,132 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
+  const products = [
+    { mark: "20'", title: t("stock20Title"), body: t("stock20Body"), image: "/media/conteneurs-20-pieds-cour-entreposage-800.webp", alt: t("alt20") },
+    { mark: "40'", title: t("stock40Title"), body: t("stock40Body"), image: CARD_40_IMG, alt: t("alt40") },
+    { mark: "40'", title: t("sideTitle"), body: t("sideBody"), image: "/media/conteneur-40-pieds-portes-laterales-noir-800.webp", alt: t("altSide") },
+  ];
+
 
   return (
     <>
-      <section className="relative min-h-[88vh] overflow-hidden">
-        <Image
-          src="/media/yard-08.jpg"
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/78 to-ink/25" />
-        <div className="relative site-grid flex min-h-[88vh] flex-col justify-end pb-16 pt-28 md:pb-24">
-          <h1 className="max-w-[14ch] text-[clamp(3.4rem,11vw,7.4rem)] uppercase text-paper">
-            {t("heroTitle")}
-          </h1>
-          <p className="measure mt-6 text-lg text-paper/90">{t("heroLead")}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <CtaLink href="/contact">{t("heroPrimary")}</CtaLink>
-            <CtaLink href="/produits" variant="ghost">
-              {t("heroSecondary")}
-            </CtaLink>
+      {/* HERO: full-bleed photo, text on a gradient */}
+      <section className="relative bg-[#0f0e0c] text-white">
+        <div className="relative aspect-[971/929] w-full md:absolute md:inset-y-0 md:right-0 md:w-[58%] md:aspect-auto">
+          <Image
+            src={HERO_IMG}
+            alt={t("altHero")}
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f0e0c] via-[#0f0e0c]/10 to-transparent md:bg-gradient-to-r md:from-[#0f0e0c] md:via-[#0f0e0c]/0 md:via-25% md:to-transparent" />
+        </div>
+        <div className="site-grid relative -mt-24 pb-8 md:mt-0 md:flex md:min-h-[min(calc(58vw*0.957),820px)] md:items-center md:py-16">
+          <div className="max-w-[34rem] md:max-w-[40%]">
+            <p className="text-[0.75rem] font-semibold tracking-[0.16em] uppercase text-[#e0875f]">{t("heroKicker")}</p>
+            <h1 className="mt-2 text-[clamp(2.3rem,5.6vw,4.8rem)] uppercase">{t("heroTitle")}</h1>
+            <div className="mt-5 flex flex-wrap gap-3 md:order-last">
+              <CallButton />
+            </div>
+            <p className="mt-6 text-white/85">{t("heroLead")}</p>
+            <p className="mt-2 text-xs tracking-[0.12em] uppercase text-white/60">{t("heroRent")}</p>
           </div>
         </div>
       </section>
 
-      <section className="bg-paper-hot text-ink">
-        <div className="site-grid grid gap-10 py-20 md:grid-cols-12 md:py-28">
-          <Reveal className="md:col-span-4">
-            <h2 className="text-[clamp(2.4rem,5vw,4rem)] uppercase">{t("offerTitle")}</h2>
-          </Reveal>
-          <div className="grid gap-10 md:col-span-8 md:grid-cols-3">
-            <Reveal delay={0.1}>
-              <h3 className="font-display text-3xl uppercase">{t("offerSaleTitle")}</h3>
-              <p className="mt-3 text-[1.02rem] text-ink-soft">{t("offerSaleBody")}</p>
-            </Reveal>
-            <Reveal delay={0.3}>
-              <h3 className="font-display text-3xl uppercase">{t("offerRentTitle")}</h3>
-              <p className="mt-3 text-[1.02rem] text-ink-soft">{t("offerRentBody")}</p>
-            </Reveal>
-            <Reveal delay={0.6}>
-              <h3 className="font-display text-3xl uppercase">{t("offerDeliverTitle")}</h3>
-              <p className="mt-3 text-[1.02rem] text-ink-soft">{t("offerDeliverBody")}</p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden">
-        <Image
-          src="/media/yard-04.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-30"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-ink/80" />
-        <div className="relative site-grid py-20 md:py-28">
-          <Reveal>
-            <h2 className="max-w-[16ch] text-[clamp(2.4rem,5vw,4.2rem)] uppercase">
-              {t("stockTitle")}
-            </h2>
-          </Reveal>
-          <div className="mt-14 grid gap-8 md:grid-cols-2">
-            <Reveal delay={0.15} className="border border-line bg-ink/70 p-7">
-              <p className="font-display text-[4.5rem] leading-none text-corten">20'</p>
-              <h3 className="mt-3 font-display text-3xl uppercase">{t("stock20Title")}</h3>
-              <p className="mt-3 text-dust">{t("stock20Body")}</p>
-            </Reveal>
-            <Reveal delay={0.45} className="border border-line bg-ink/70 p-7">
-              <p className="font-display text-[4.5rem] leading-none text-corten">40'</p>
-              <h3 className="mt-3 font-display text-3xl uppercase">{t("stock40Title")}</h3>
-              <p className="mt-3 text-dust">{t("stock40Body")}</p>
-            </Reveal>
-          </div>
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
-            <Reveal delay={0.15}>
-              <h3 className="font-display text-2xl uppercase text-paper">{t("stockNew")}</h3>
-              <p className="mt-2 text-dust">{t("stockNewBody")}</p>
-            </Reveal>
-            <Reveal delay={0.45}>
-              <h3 className="font-display text-2xl uppercase text-paper">{t("stockUsed")}</h3>
-              <p className="mt-2 text-dust">{t("stockUsedBody")}</p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
+      {/* PRODUCTS */}
       <section className="bg-ink">
-        <div className="site-grid py-20 md:py-28">
-          <Reveal>
-            <h2 className="max-w-[16ch] text-[clamp(2.4rem,5vw,4.2rem)] uppercase">
-              {t("processTitle")}
-            </h2>
-          </Reveal>
-          <ol className="mt-14 grid gap-12 md:grid-cols-3">
-            <Reveal as="li" delay={0}>
-              <h3 className="font-display text-3xl uppercase">{t("step1Title")}</h3>
-              <p className="mt-3 text-dust">{t("step1Body")}</p>
-            </Reveal>
-            <Reveal as="li" delay={0.3}>
-              <h3 className="font-display text-3xl uppercase">{t("step2Title")}</h3>
-              <p className="mt-3 text-dust">{t("step2Body")}</p>
-            </Reveal>
-            <Reveal as="li" delay={0.6}>
-              <h3 className="font-display text-3xl uppercase">{t("step3Title")}</h3>
-              <p className="mt-3 text-dust">{t("step3Body")}</p>
-            </Reveal>
+        <div className="site-grid py-16 md:py-24">
+          <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("productsTitle")}</h2>
+          <p className="mt-3 text-dust">{t("productsLead")}</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {products.map((p) => (
+              <article key={p.title} className="plate flex flex-col">
+                <div className="relative aspect-[4/3]">
+                  <Image src={p.image} alt={p.alt} fill className="object-cover" sizes="(min-width: 768px) 33vw, 100vw" />
+                </div>
+                <div className="plate-body flex flex-1 flex-col">
+                  <p className="stencil text-6xl text-corten">{p.mark}</p>
+                  <h3 className="mt-3 font-display text-2xl uppercase">{p.title}</h3>
+                  <p className="mt-2 flex-1 text-dust">{p.body}</p>
+                  {/* SPECS: dimensions and capacity go here once Marc-André confirms them. Product schema (JSON-LD) to be added with the specs. */}
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <CallButton />
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10">
+            <CtaLink href="/produits" variant="ghost">{t("productsMore")}</CtaLink>
+          </div>
+        </div>
+      </section>
+
+      {/* OFFER */}
+      <section className="border-t border-line bg-ink-soft">
+        <div className="site-grid grid gap-10 py-16 md:grid-cols-12 md:py-24">
+          <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase md:col-span-4">{t("offerTitle")}</h2>
+          <div className="grid gap-10 md:col-span-8 md:grid-cols-3">
+            {([["offerSaleTitle","offerSaleBody"],["offerRentTitle","offerRentBody"],["offerDeliverTitle","offerDeliverBody"]] as const).map(([a,b]) => (
+              <div key={a} className="border-t-2 border-corten pt-4">
+                <h3 className="font-display text-2xl uppercase">{t(a)}</h3>
+                <p className="mt-3 text-dust">{t(b)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PHOTO BAND */}
+      <div className="relative h-[52vw] max-h-[560px] min-h-[240px]">
+        <Image src="/media/conteneurs-20-pieds-cour-entreposage-1600.webp" alt={t("alt20")} fill className="object-cover object-[50%_60%]" sizes="100vw" />
+      </div>
+
+      {/* PROCESS */}
+      <section className="bg-ink">
+        <div className="site-grid py-16 md:py-24">
+          <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("processTitle")}</h2>
+          <ol className="mt-10 grid gap-10 md:grid-cols-3">
+            {([["step1Title","step1Body"],["step2Title","step2Body"],["step3Title","step3Body"]] as const).map(([a,b], i) => (
+              <li key={a}>
+                <p className="font-display text-4xl text-corten">0{i + 1}</p>
+                <h3 className="mt-2 font-display text-2xl uppercase">{t(a)}</h3>
+                <p className="mt-3 text-dust">{t(b)}</p>
+              </li>
+            ))}
           </ol>
         </div>
       </section>
 
+      {/* TRUST: edge-to-edge split */}
       <section className="grid md:grid-cols-2">
-        <div className="relative min-h-[320px]">
-          <Image
-            src="/media/yard-38.jpg"
-            alt=""
-            fill
-            className="object-cover object-[30%_center]"
-            sizes="(min-width: 768px) 50vw, 100vw"
-          />
+        <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[480px]">
+          <Image src="/media/yard-45.jpg" alt={t("galleryAlt")} fill className="object-cover object-center" sizes="(min-width: 768px) 50vw, 100vw" />
         </div>
-        <div className="flex flex-col justify-center bg-corten px-6 py-16 text-paper-hot md:px-14">
-          <Reveal>
-            <h2 className="text-[clamp(2.2rem,4vw,3.6rem)] uppercase">{t("trustTitle")}</h2>
-            <p className="measure mt-5 text-paper-hot/90">{t("trustBody")}</p>
-            <ul className="mt-8 flex flex-col gap-2 text-[0.95rem]">
-              <li>{t("trustLocal")}</li>
-              <li>{t("trustStock")}</li>
-              <li>{t("trustBoth")}</li>
-            </ul>
-          </Reveal>
+        <div className="flex flex-col justify-center bg-corten px-6 py-16 text-white md:px-14">
+          <h2 className="text-[clamp(2rem,3.6vw,3rem)] uppercase">{t("trustTitle")}</h2>
+          <p className="measure mt-5 text-white/90">{t("trustBody")}</p>
+          <ul className="mt-8 flex flex-col gap-2 text-[0.95rem]">
+            <li>{t("trustLocal")}</li>
+            <li>{t("trustStock")}</li>
+            <li>{t("trustBoth")}</li>
+          </ul>
         </div>
       </section>
 
       <PhotoGrid />
 
-      <section className="bg-paper text-ink">
-        <div className="site-grid flex flex-col items-start gap-6 py-20 md:py-28">
-          <Reveal>
-            <h2 className="max-w-[14ch] text-[clamp(2.6rem,6vw,5rem)] uppercase">
-              {t("ctaTitle")}
-            </h2>
-            <p className="measure mt-5 text-ink-soft">{t("ctaBody")}</p>
-            <div className="mt-8">
-              <CtaLink href="/contact">{t("ctaButton")}</CtaLink>
-            </div>
-          </Reveal>
+      {/* FINAL CTA */}
+      <section className="bg-[#0f0e0c] text-white">
+        <div className="site-grid py-16 md:py-24">
+          <h2 className="max-w-[18ch] text-[clamp(2.2rem,5vw,4rem)] uppercase">{t("ctaTitle")}</h2>
+          <p className="measure mt-5 text-white/80">{t("ctaBody")}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <CallButton />
+          </div>
         </div>
       </section>
     </>

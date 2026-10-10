@@ -8,30 +8,30 @@ export async function PhotoGrid() {
 
   return (
     <section className="bg-ink">
-      <div className="site-grid py-20 md:py-28">
+      <div className="site-grid pt-16 pb-8 md:pt-24">
         <Reveal>
-          <h2 className="max-w-[16ch] text-[clamp(2.4rem,5vw,4.2rem)] uppercase">
+          <h2 className="max-w-[18ch] text-[clamp(2rem,4vw,3.2rem)] uppercase">
             {t("title")}
           </h2>
           <p className="measure mt-5 text-dust">{t("lead")}</p>
         </Reveal>
-        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      </div>
+      <div className="grid grid-cols-2 gap-1 lg:grid-cols-4">
           {homeGallery.map((photo, index) => (
             <Reveal
               key={photo.src}
-              delay={(index % 3) * 0.15}
-              className="relative aspect-[4/3] overflow-hidden bg-ink-soft"
+              delay={0}
+              className="relative aspect-[4/3] overflow-hidden"
             >
               <Image
                 src={photo.src}
                 alt={t(photo.altKey)}
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 25vw, 50vw"
               />
             </Reveal>
           ))}
-        </div>
       </div>
     </section>
   );

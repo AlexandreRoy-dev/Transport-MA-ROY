@@ -1,12 +1,12 @@
 {
   "meta": {
     "siteName": "Transport M-A Roy",
-    "homeTitle": "20' and 40' shipping container sales | Eastern Townships and Quebec",
-    "homeDescription": "Transport M-A Roy sells and rents 20' and 40' shipping containers from Cookshire-Eaton. Eastern Townships specialist, delivery across Quebec.",
+    "homeTitle": "20' and 40' shipping containers for sale | Eastern Townships and Quebec",
+    "homeDescription": "Transport M-A Roy sells 20' and 40' shipping containers from Cookshire-Eaton. Rental also available. Eastern Townships specialist, delivery anywhere in Quebec.",
     "servicesTitle": "Services | Transport M-A Roy",
     "servicesDescription": "Sale, rental, modification, and delivery of shipping containers, including refrigerated and insulated units.",
     "productsTitle": "Products | Transport M-A Roy",
-    "productsDescription": "20-foot, 40-foot, High Cube, and refrigerated containers, new or used, with door and other modifications available.",
+    "productsDescription": "20-foot, 40-foot, 40-foot side-door, and refrigerated containers, new or used, with door and other modifications available.",
     "aboutTitle": "About | Transport M-A Roy",
     "aboutDescription": "Company founded in 2020 in Sherbrooke, with a commercial yard on Route 108 in Cookshire-Eaton since 2023.",
     "contactTitle": "Contact and quote | Transport M-A Roy",
@@ -20,7 +20,7 @@
     "products": "Products",
     "about": "About",
     "contact": "Contact",
-    "quote": "Request a quote",
+    "quote": "Ask for a price",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language"
@@ -31,22 +31,22 @@
     "tag": "Sale · Rental · Modification"
   },
   "home": {
-    "heroTitle": "20' and 40' shipping containers for the Eastern Townships and Quebec",
-    "heroLead": "Sale, rental, and modification of new or used containers, delivered from our Cookshire-Eaton yard. We serve all of Quebec, with a focus on the Eastern Townships.",
-    "heroPrimary": "Request a quote",
+    "heroTitle": "20' and 40' shipping containers for sale",
+    "heroLead": "New or used containers for sale, delivered from our Cookshire-Eaton yard. We serve all of Quebec, with a focus on the Eastern Townships.",
+    "heroPrimary": "Ask for a price",
     "heroSecondary": "See the sizes",
     "offerTitle": "Sale, rental, and modification",
     "offerSaleTitle": "Sale",
     "offerSaleBody": "This is our specialty: a 20' or 40' that stays with you, for a business, a job site, a farm, or a sugar shack.",
     "offerRentTitle": "Rental",
     "offerRentBody": "Secure space for the length of a project. We rent, even though sales remain the core of the work.",
-    "offerDeliverTitle": "Delivery",
-    "offerDeliverBody": "We bring the container to you, anywhere in Quebec, from the yard on Route 108.",
+    "offerDeliverTitle": "Container delivery",
+    "offerDeliverBody": "The container you buy or rent is delivered to you anywhere in Quebec, from our yard on Route 108.",
     "stockTitle": "20-foot and 40-foot containers, new or used",
     "stock20Title": "20 foot",
     "stock20Body": "The compact size for a yard, driveway, or field edge. Enough for a shop, inventory, or a household.",
     "stock40Title": "40 foot",
-    "stock40Body": "Job-site and business volume. Also as High Cube, and as an insulated refrigerated unit for maple operations.",
+    "stock40Body": "Job-site and business volume. Also as an insulated refrigerated unit for maple operations.",
     "stockNew": "New",
     "stockUsed": "Used",
     "stockNewBody": "Clean paint, tight seals, built to sit for years.",
@@ -63,9 +63,24 @@
     "trustLocal": "Townships focus, Quebec-wide delivery",
     "trustStock": "More than 1,500 customers since 2020",
     "trustBoth": "Sales first, plus rental and modification",
-    "ctaTitle": "Request a quote for a container",
+    "ctaTitle": "Ask for a price on a container",
     "ctaBody": "Tell us the size, sale or rental, and where to set it. We reply with what is available.",
-    "ctaButton": "Write or call"
+    "ctaButton": "Ask for a price",
+    "heroCall": "Call 819 578-3441",
+    "productsTitle": "Our containers",
+    "productsLead": "New or used, for sale. Rental also available. Today's stock is confirmed with your price request.",
+    "sideTitle": "40 foot container with side doors",
+    "sideBody": "A 40 foot that opens along the side. Reach everything without emptying the container from the end.",
+    "altHero": "Green 40 foot shipping container on a trailer",
+    "alt20": "20 foot containers in the storage yard",
+    "alt40": "Green 40 foot container on a trailer",
+    "altSide": "Black 40 foot container with side doors",
+    "productsMore": "See all products",
+    "heroKicker": "Eastern Townships and Quebec",
+    "priceCta": "Ask for a price",
+    "callShort": "Call",
+    "galleryAlt": "Row of 20 foot containers set up on a lawn",
+    "heroRent": "Rental also available."
   },
   "services": {
     "title": "Sale, rental, delivery, and modification",
@@ -78,7 +93,7 @@
     "rentTitle": "Rental",
     "rentBody": "We also rent, for a job site, a renovation, or a season. Sales remain our specialty.",
     "rentPoint1": "Term matched to the project",
-    "rentPoint2": "Same sizes as sales: 20', 40', High Cube, refrigerated",
+    "rentPoint2": "Same sizes as sales: 20', 40', 40' with side doors, refrigerated",
     "rentPoint3": "Useful when the need is not permanent",
     "deliverTitle": "Delivery across Quebec, Townships first",
     "deliverBody": "The truck leaves the Cookshire-Eaton yard. We talk access, ground, and clearance before we promise a day.",
@@ -90,7 +105,7 @@
     "modifyPoint1": "Garage / roll-up doors on the side or the end",
     "modifyPoint2": "Useful for frequent access, equipment, and vehicles",
     "modifyPoint3": "Specified on the quote for the container you choose",
-    "cta": "Request a quote"
+    "cta": "Ask for a price"
   },
   "products": {
     "title": "20', 40', and refrigerated containers",
@@ -101,9 +116,6 @@
     "size40Title": "40 foot",
     "size40Body": "The job-site and business length. Materials, pallets, equipment. Chosen when ground space is not the limit.",
     "size40Spec": "Double the length · project storage",
-    "sizeHcTitle": "40 foot High Cube",
-    "sizeHcBody": "Same length, more headroom. Stack higher, store tall volume, or walk without stooping.",
-    "sizeHcSpec": "Extra height · same ground print",
     "sizeReeferTitle": "Refrigerated / insulated",
     "sizeReeferBody": "The model we sell most to farmers and sugar shacks. Insulation to hold cold or a more stable temperature.",
     "sizeReeferSpec": "Insulated container · farm and maple use",
@@ -118,7 +130,12 @@
     "useStorage": "Businesses and households: locked storage",
     "useSite": "Construction and job sites",
     "useFarm": "Farmers and sugar shacks, especially insulated refrigerated units",
-    "cta": "Check availability"
+    "cta": "Ask for a price",
+    "sizeSideTitle": "40 foot container with side doors",
+    "sizeSideBody": "A 40 foot that opens along the side. Reach everything without emptying the container from the end.",
+    "sizeSideSpec": "Side doors · access along the full length",
+    "priceCta": "Ask for a price",
+    "callShort": "Call"
   },
   "about": {
     "title": "Transport M-A Roy, since 2020",
@@ -129,10 +146,10 @@
     "localBody": "In 2023 we bought the current site on Route 108 in Cookshire-Eaton: a commercial yard for local sales. We serve all of Quebec, with a focus on the Eastern Townships.",
     "promiseTitle": "Who we work with",
     "promiseBody": "Businesses, construction, households, farmers, and maple operations. When the project needs it, we sell insulated refrigerated containers most of all.",
-    "cta": "Write to us"
+    "cta": "Ask for a price"
   },
   "contact": {
-    "title": "Request a quote",
+    "title": "Ask for a price",
     "lead": "Size, buy or rent, and where to set it. We reply with what is available.",
     "phoneLabel": "Phone",
     "phone": "819 578-3441",
@@ -155,7 +172,6 @@
     "size": "Size",
     "size20": "20 foot",
     "size40": "40 foot",
-    "sizeHc": "40 foot High Cube",
     "sizeReefer": "Refrigerated / insulated",
     "sizeUnsure": "Not sure yet",
     "intent": "Need",
@@ -169,7 +185,8 @@
     "sentBody": "If nothing opens, copy the message and write to us at {email} or call 819 578-3441.",
     "errorRequired": "Fill in your name, email, and message.",
     "errorEmail": "Enter a valid email address.",
-    "subject": "Quote request: Transport M-A Roy"
+    "subject": "Quote request: Transport M-A Roy",
+    "sizeSide": "40 foot with side doors"
   },
   "privacy": {
     "title": "Privacy",
@@ -195,7 +212,7 @@
     "creditName": "Roy Marketing"
   },
   "gallery": {
-    "title": "Photos of yards, sites, and deliveries",
+    "title": "Our containers, in the yard and at clients' sites",
     "lead": "Containers set at customer sites, in the yard, and on the truck. Photos provided by Transport M-A Roy.",
     "alt40Dark": "Dark grey 40-foot container on a trailer",
     "alt40Green": "New green 40-foot container on a trailer",
