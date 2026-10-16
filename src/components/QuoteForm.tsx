@@ -19,6 +19,7 @@ export function QuoteForm() {
     const phone = String(data.get("phone") ?? "").trim();
     const size = String(data.get("size") ?? "");
     const intent = String(data.get("intent") ?? "");
+    const city = String(data.get("city") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
 
     if (!name || !email || !message) {
@@ -36,6 +37,7 @@ export function QuoteForm() {
       `${t("phoneField")}: ${phone || "-"}`,
       `${t("size")}: ${size}`,
       `${t("intent")}: ${intent}`,
+      `${t("city")}: ${city || "-"}`,
       "",
       message,
     ].join("\n");
@@ -131,8 +133,17 @@ export function QuoteForm() {
             <input type="radio" name="intent" value={t("intentModify")} />
             {t("intentModify")}
           </label>
+          <label className="inline-flex min-h-11 items-center gap-2 text-paper">
+            <input type="radio" name="intent" value={t("intentAdvice")} />
+            {t("intentAdvice")}
+          </label>
         </div>
       </fieldset>
+
+      <label className="mt-6 block text-sm text-dust">
+        {t("city")}
+        <input name="city" autoComplete="address-level2" className={field} placeholder={t("cityPlaceholder")} />
+      </label>
 
       <label className="mt-6 block text-sm text-dust">
         {t("message")}

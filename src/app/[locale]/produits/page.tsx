@@ -5,6 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import type { AppLocale } from "@/i18n/routing";
 import { pageMeta } from "@/lib/metadata";
 import { CARD_40_IMG } from "@/lib/images";
+import { Card40Picture } from "@/components/Card40Picture";
 
 export async function generateMetadata() {
   return pageMeta("products");
@@ -67,13 +68,13 @@ export default async function ProductsPage({
             className="plate flex flex-col"
           >
             <div className="relative aspect-[16/10]">
-              <Image
+              {size.image === CARD_40_IMG ? <Card40Picture alt={size.title} /> : <Image
                 src={size.image}
                 alt={size.title}
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
-              />
+              />}
             </div>
             <div className="plate-body">
               <p className="stencil text-7xl text-corten">{size.mark}</p>

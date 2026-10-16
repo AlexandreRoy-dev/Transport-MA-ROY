@@ -6,6 +6,7 @@ import { PhotoGrid } from "@/components/PhotoGrid";
 import type { AppLocale } from "@/i18n/routing";
 import { pageMeta } from "@/lib/metadata";
 import { CARD_40_IMG } from "@/lib/images";
+import { Card40Picture } from "@/components/Card40Picture";
 
 export async function generateMetadata() {
   return pageMeta("home");
@@ -54,7 +55,7 @@ export default async function HomePage({
               <CallButton />
             </div>
             <p className="mt-6 text-white/85">{t("heroLead")}</p>
-            <p className="mt-2 text-xs tracking-[0.12em] uppercase text-white/60">{t("heroRent")}</p>
+            {t("heroRent") ? <p className="mt-2 text-xs tracking-[0.12em] uppercase text-white/60">{t("heroRent")}</p> : null}
           </div>
         </div>
       </section>
@@ -68,7 +69,7 @@ export default async function HomePage({
             {products.map((p) => (
               <article key={p.title} className="plate flex flex-col">
                 <div className="relative aspect-[4/3]">
-                  <Image src={p.image} alt={p.alt} fill className="object-cover" sizes="(min-width: 768px) 33vw, 100vw" />
+                  {p.image === CARD_40_IMG ? <Card40Picture alt={p.alt} /> : <Image src={p.image} alt={p.alt} fill className="object-cover" sizes="(min-width: 768px) 33vw, 100vw" />}
                 </div>
                 <div className="plate-body flex flex-1 flex-col">
                   <p className="stencil text-6xl text-corten">{p.mark}</p>
@@ -91,7 +92,10 @@ export default async function HomePage({
       {/* OFFER */}
       <section className="border-t border-line bg-ink-soft">
         <div className="site-grid grid gap-10 py-16 md:grid-cols-12 md:py-24">
-          <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase md:col-span-4">{t("offerTitle")}</h2>
+          <div className="md:col-span-4">
+            <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("offerTitle")}</h2>
+            <p className="mt-4 text-dust">{t("offerLead")}</p>
+          </div>
           <div className="grid gap-10 md:col-span-8 md:grid-cols-3">
             {([["offerSaleTitle","offerSaleBody"],["offerRentTitle","offerRentBody"],["offerDeliverTitle","offerDeliverBody"]] as const).map(([a,b]) => (
               <div key={a} className="border-t-2 border-corten pt-4">

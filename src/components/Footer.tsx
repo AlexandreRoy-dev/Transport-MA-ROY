@@ -15,7 +15,7 @@ export async function Footer() {
           <Wordmark />
           <p className="measure mt-5 text-[0.98rem] text-dust">{t("blurb")}</p>
           <p className="mt-4 text-sm text-steel">
-            {contact("phone")} · {contact("email")}
+            {contact("phone")} - {contact("email")}
           </p>
         </div>
         <div className="md:col-span-3">

@@ -81,7 +81,8 @@
     "priceCta": "Ask for a price",
     "callShort": "Call",
     "galleryAlt": "Row of 20 foot containers set up on a lawn",
-    "heroRent": "Rental also available."
+    "heroRent": "Rental also available.",
+    "offerLead": "Buy, rent or modify: we work with you to find the solution that fits your project, your site and your budget."
   },
   "services": {
     "title": "Sale, rental, delivery, and modification",
@@ -147,7 +148,8 @@
     "localBody": "In 2023 we bought the current site on Route 108 in Cookshire-Eaton: a commercial yard for local sales. We serve all of Quebec, with a focus on the Eastern Townships.",
     "promiseTitle": "Who we work with",
     "promiseBody": "Businesses, construction, households, farmers, and maple operations. When the project needs it, we sell insulated refrigerated containers most of all.",
-    "cta": "Ask for a price"
+    "cta": "Ask for a price",
+    "lead2": "Today we sell, rent and modify shipping containers for businesses, contractors, homeowners, farmers and maple producers, with the direct service of a local company. Eastern Townships specialists, we deliver anywhere in Quebec."
   },
   "contact": {
     "title": "Ask for a price",
@@ -187,7 +189,10 @@
     "errorRequired": "Fill in your name, email, and message.",
     "errorEmail": "Enter a valid email address.",
     "subject": "Quote request: Transport M-A Roy",
-    "sizeSide": "40 foot with side doors"
+    "sizeSide": "40 foot with side doors",
+    "intentAdvice": "Advice",
+    "city": "Delivery municipality",
+    "cityPlaceholder": "E.g. Cookshire-Eaton"
   },
   "privacy": {
     "title": "Privacy",
