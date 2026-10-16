@@ -23,7 +23,7 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const products = [
-    { mark: "20'", title: t("stock20Title"), body: t("stock20Body"), image: "/media/conteneurs-20-pieds-cour-entreposage-800.webp", alt: t("alt20") },
+    { mark: "20'", title: t("stock20Title"), body: t("stock20Body"), image: "/media/conteneur-20-pieds-blanc-installe-800.webp", alt: t("alt20Card") },
     { mark: "40'", title: t("stock40Title"), body: t("stock40Body"), image: CARD_40_IMG, alt: t("alt40") },
     { mark: "40'", title: t("sideTitle"), body: t("sideBody"), image: "/media/conteneur-40-pieds-portes-laterales-noir-800.webp", alt: t("altSide") },
   ];

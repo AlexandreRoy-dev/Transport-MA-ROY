@@ -47,7 +47,7 @@ export default async function ProductsPage({
       body: t("sizeReeferBody"),
       spec: t("sizeReeferSpec"),
       mark: "RF",
-      image: "/media/yard-13.jpg",
+      image: "/media/conteneur-refrigere-40-pieds-remorque-800.webp",
     },
   ];
 
@@ -72,7 +72,7 @@ export default async function ProductsPage({
                 src={size.image}
                 alt={size.title}
                 fill
-                className="object-cover"
+                className={size.mark === "RF" ? "object-cover object-top" : "object-cover"}
                 sizes="(min-width: 768px) 50vw, 100vw"
               />}
             </div>
