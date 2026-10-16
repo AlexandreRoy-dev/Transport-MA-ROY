@@ -26,7 +26,7 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Transport M-A Roy inc.",
-    url: "https://transport.roymarketing.ca",
+    url: "https://transportmar.ca",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Route 108",
