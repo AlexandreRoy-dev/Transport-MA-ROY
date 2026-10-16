@@ -25,6 +25,7 @@ export default async function AboutPage({
           {t("title")}
         </h1>
         <p className="measure mt-6 text-lg text-dust">{t("lead")}</p>
+        <p className="measure mt-4 text-lg text-dust">{t("lead2")}</p>
       </section>
 
       <div className="relative h-[46vw] min-h-64 max-h-[480px]">
