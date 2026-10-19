@@ -15,9 +15,27 @@ const body = Atkinson_Hyperlegible({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://transportmar.ca"),
   title: "Transport M-A Roy",
   description:
     "Vente et location de conteneurs maritimes 20' et 40' en Estrie.",
+  openGraph: {
+    type: "website",
+    siteName: "Transport M-A Roy",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/og/transport-ma-roy-partage-1200x630.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Conteneur maritime 40 pieds vert sur remorque, Transport M-A Roy, conteneurs à vendre et à louer en Estrie",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og/transport-ma-roy-partage-1200x630.jpg"],
+  },
 };
 
 export default async function RootLayout({
