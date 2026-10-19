@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/og/transport-ma-roy-partage-1200x630.jpg",
         width: 1200,
         height: 630,
-        alt: "Conteneur maritime 40 pieds vert sur remorque, Transport M-A Roy, conteneurs à vendre et à louer en Estrie",
+        alt: "Conteneur maritime de 40 pieds sur une remorque, avec le texte Conteneurs maritimes à vendre et à louer de Transport M-A Roy.",
       },
     ],
   },
