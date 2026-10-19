@@ -234,5 +234,12 @@
     "altRollup": "Modified container with two side roll-up doors",
     "altRollupTrailer": "Cream container with a roll-up door, on a trailer",
     "altUsedFarm": "Used blue container installed at a field edge"
+  },
+  "cookies": {
+    "label": "Cookies",
+    "text": "We use cookies to run the site and, with your consent, to measure how it is used.",
+    "more": "Learn more",
+    "accept": "Accept",
+    "refuse": "Decline"
   }
 }

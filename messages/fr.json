@@ -234,5 +234,12 @@
     "altRollup": "Conteneur modifié avec deux portes à enroulement latérales",
     "altRollupTrailer": "Conteneur crème avec porte à enroulement, sur remorque",
     "altUsedFarm": "Conteneur usagé bleu installé en bord de champ"
+  },
+  "cookies": {
+    "label": "Témoins de navigation",
+    "text": "Nous utilisons des témoins (cookies) pour faire fonctionner le site et, avec votre accord, mesurer son utilisation.",
+    "more": "En savoir plus",
+    "accept": "Accepter",
+    "refuse": "Refuser"
   }
 }
