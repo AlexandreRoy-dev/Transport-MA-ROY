@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -16,52 +16,61 @@ export function Reveal({
   as: Tag = "div",
 }: RevealProps) {
   const ref = useRef<HTMLElement | null>(null);
-  const [inView, setInView] = useState(false);
-  const [pending, setPending] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      setInView(true);
+    if (reduce) return;
+
+    const vh = window.innerHeight || 1;
+    const rect = el.getBoundingClientRect();
+    const alreadyInView = rect.top < vh * 0.72 && rect.bottom > vh * 0.08;
+    if (alreadyInView) {
+      el.classList.add("is-in");
       return;
     }
 
+    // A 0.5 threshold never fires when the block is taller than the viewport.
+    // Cap it by the share of the element that can actually sit on screen.
+    const height = Math.max(rect.height, 1);
+    const reachable = Math.min(1, vh / height);
+    const threshold = Math.min(0.45, Math.max(0.12, reachable * 0.55));
+
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          setPending(false);
-          io.disconnect();
-        }
+        if (!entry?.isIntersecting) return;
+        el.dataset.pending = "false";
+        el.classList.add("is-in");
+        io.disconnect();
       },
-      { threshold: 0.5 },
+      { threshold, rootMargin: "0px 0px -8% 0px" },
     );
 
-    const rect = el.getBoundingClientRect();
-    const already =
-      rect.top < window.innerHeight * 0.85 && rect.bottom > 0;
+    el.dataset.pending = "true";
+    io.observe(el);
+    const frame = requestAnimationFrame(() => {
+      el.dataset.ready = "true";
+    });
 
-    if (already) {
-      setInView(true);
-    } else {
-      setPending(true);
-      io.observe(el);
-    }
-
-    return () => io.disconnect();
+    return () => {
+      cancelAnimationFrame(frame);
+      io.disconnect();
+    };
   }, []);
+
+  const style = { "--reveal-delay": `${delay}s` } as CSSProperties;
 
   return (
     <Tag
       ref={(node: HTMLElement | null) => {
         ref.current = node;
       }}
-      data-pending={pending && !inView ? "true" : "false"}
-      className={`reveal ${inView ? "is-in" : ""} ${className}`}
-      style={{ transitionDelay: inView ? `${delay}s` : "0s" }}
+      data-pending="false"
+      data-ready="false"
+      className={`reveal${className ? ` ${className}` : ""}`}
+      style={style}
     >
       {children}
     </Tag>

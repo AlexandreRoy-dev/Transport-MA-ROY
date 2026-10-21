@@ -7,6 +7,7 @@ import type { AppLocale } from "@/i18n/routing";
 import { pageMeta } from "@/lib/metadata";
 import { CARD_40_IMG } from "@/lib/images";
 import { Card40Picture } from "@/components/Card40Picture";
+import { Reveal } from "@/components/Reveal";
 
 export async function generateMetadata() {
   return pageMeta("home");
@@ -45,7 +46,7 @@ export default async function HomePage({
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f0e0c] via-[#0f0e0c]/10 to-transparent md:bg-gradient-to-r md:from-[#0f0e0c] md:via-[#0f0e0c]/0 md:via-25% md:to-transparent" />
         </div>
         <div className="site-grid relative -mt-24 pb-8 md:mt-0 md:flex md:min-h-[min(calc(58vw*0.957),820px)] md:items-center md:py-16">
-          <div className="max-w-[34rem] md:max-w-[40%]">
+          <div className="hero-enter max-w-[34rem] md:max-w-[40%]">
             <p className="text-[0.75rem] font-semibold tracking-[0.16em] uppercase text-[#e0875f]">{t("heroKicker")}</p>
             <h1 className="mt-2 text-[clamp(2.3rem,5.6vw,4.8rem)] uppercase">{t("heroTitle")}</h1>
             <p className="mt-3 max-w-[36rem] text-[0.98rem] leading-snug text-balance text-white/90">
@@ -63,11 +64,13 @@ export default async function HomePage({
       {/* PRODUCTS */}
       <section className="bg-ink">
         <div className="site-grid py-16 md:py-24">
-          <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("productsTitle")}</h2>
-          <p className="mt-3 text-dust">{t("productsLead")}</p>
+          <Reveal>
+            <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("productsTitle")}</h2>
+            <p className="mt-3 text-dust">{t("productsLead")}</p>
+          </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {products.map((p) => (
-              <article key={p.title} className="plate flex flex-col">
+            {products.map((p, index) => (
+              <Reveal key={p.title} as="article" delay={index * 0.3} className="plate flex flex-col">
                 <div className="relative aspect-[4/3]">
                   {p.image === CARD_40_IMG ? <Card40Picture alt={p.alt} /> : <Image src={p.image} alt={p.alt} fill className="object-cover" sizes="(min-width: 768px) 33vw, 100vw" />}
                 </div>
@@ -80,7 +83,7 @@ export default async function HomePage({
                     <CallButton />
                   </div>
                 </div>
-              </article>
+              </Reveal>
             ))}
           </div>
           <div className="mt-10">
@@ -92,16 +95,16 @@ export default async function HomePage({
       {/* OFFER */}
       <section className="border-t border-line bg-ink-soft">
         <div className="site-grid grid gap-10 py-16 md:grid-cols-12 md:py-24">
-          <div className="md:col-span-4">
+          <Reveal className="md:col-span-4">
             <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("offerTitle")}</h2>
             <p className="mt-4 text-dust">{t("offerLead")}</p>
-          </div>
+          </Reveal>
           <div className="grid gap-10 md:col-span-8 md:grid-cols-3">
-            {([["offerSaleTitle","offerSaleBody"],["offerRentTitle","offerRentBody"],["offerDeliverTitle","offerDeliverBody"]] as const).map(([a,b]) => (
-              <div key={a} className="border-t-2 border-corten pt-4">
+            {([["offerSaleTitle","offerSaleBody"],["offerRentTitle","offerRentBody"],["offerDeliverTitle","offerDeliverBody"]] as const).map(([a,b], index) => (
+              <Reveal key={a} delay={index * 0.3} className="card-motion border-t-2 border-corten pt-4">
                 <h3 className="font-display text-2xl uppercase">{t(a)}</h3>
                 <p className="mt-3 text-dust">{t(b)}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -115,14 +118,16 @@ export default async function HomePage({
       {/* PROCESS */}
       <section className="bg-ink">
         <div className="site-grid py-16 md:py-24">
-          <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("processTitle")}</h2>
+          <Reveal>
+            <h2 className="text-[clamp(2rem,4vw,3.2rem)] uppercase">{t("processTitle")}</h2>
+          </Reveal>
           <ol className="mt-10 grid gap-10 md:grid-cols-3">
             {([["step1Title","step1Body"],["step2Title","step2Body"],["step3Title","step3Body"]] as const).map(([a,b], i) => (
-              <li key={a}>
+              <Reveal as="li" key={a} delay={i * 0.3} className="card-motion">
                 <p className="font-display text-4xl text-corten">0{i + 1}</p>
                 <h3 className="mt-2 font-display text-2xl uppercase">{t(a)}</h3>
                 <p className="mt-3 text-dust">{t(b)}</p>
-              </li>
+              </Reveal>
             ))}
           </ol>
         </div>
@@ -133,7 +138,7 @@ export default async function HomePage({
         <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[480px]">
           <Image src="/media/yard-45.jpg" alt={t("galleryAlt")} fill className="object-cover object-center" sizes="(min-width: 768px) 50vw, 100vw" />
         </div>
-        <div className="flex flex-col justify-center bg-corten px-6 py-16 text-white md:px-14">
+        <Reveal className="flex flex-col justify-center bg-corten px-6 py-16 text-white md:px-14">
           <h2 className="text-[clamp(2rem,3.6vw,3rem)] uppercase">{t("trustTitle")}</h2>
           <p className="measure mt-5 text-white/90">{t("trustBody")}</p>
           <ul className="mt-8 flex flex-col gap-2 text-[0.95rem]">
@@ -141,7 +146,7 @@ export default async function HomePage({
             <li>{t("trustStock")}</li>
             <li>{t("trustBoth")}</li>
           </ul>
-        </div>
+        </Reveal>
       </section>
 
       <PhotoGrid />
@@ -149,11 +154,13 @@ export default async function HomePage({
       {/* FINAL CTA */}
       <section className="bg-[#0f0e0c] text-white">
         <div className="site-grid py-16 md:py-24">
-          <h2 className="max-w-[18ch] text-[clamp(2.2rem,5vw,4rem)] uppercase">{t("ctaTitle")}</h2>
-          <p className="measure mt-5 text-white/80">{t("ctaBody")}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <CallButton />
-          </div>
+          <Reveal>
+            <h2 className="max-w-[18ch] text-[clamp(2.2rem,5vw,4rem)] uppercase">{t("ctaTitle")}</h2>
+            <p className="measure mt-5 text-white/80">{t("ctaBody")}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <CallButton />
+            </div>
+          </Reveal>
         </div>
       </section>
     </>

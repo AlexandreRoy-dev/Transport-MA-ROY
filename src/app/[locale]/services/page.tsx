@@ -43,7 +43,7 @@ export default async function ServicesPage({
 
   return (
     <>
-      <section className="site-grid grid gap-10 py-20 md:grid-cols-12 md:py-28">
+      <section className="hero-enter site-grid grid gap-10 py-20 md:grid-cols-12 md:py-28">
         <div className="md:col-span-7">
           <h1 className="text-[clamp(2.6rem,6vw,4.4rem)] uppercase">{t("title")}</h1>
         </div>
@@ -63,8 +63,8 @@ export default async function ServicesPage({
 
       <section className="site-grid py-16 md:py-24">
         <div className="flex flex-col gap-16">
-          {blocks.map((block, index) => (
-            <Reveal key={block.title} delay={index * 0.15} className="grid gap-6 md:grid-cols-12">
+          {blocks.map((block) => (
+            <Reveal key={block.title} className="grid gap-6 md:grid-cols-12">
               <h2 className="font-display text-[clamp(2rem,4vw,3.2rem)] uppercase md:col-span-5">
                 {block.title}
               </h2>

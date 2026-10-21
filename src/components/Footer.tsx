@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { SiteIcons } from "./SiteIcons";
 import { Wordmark } from "./Wordmark";
 
 export async function Footer() {
@@ -10,6 +11,7 @@ export async function Footer() {
 
   return (
     <footer className="border-t border-line bg-ink">
+      <SiteIcons />
       <div className="site-grid grid gap-10 py-16 md:grid-cols-12">
         <div className="md:col-span-5">
           <Wordmark />

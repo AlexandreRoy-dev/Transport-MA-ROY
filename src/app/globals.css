@@ -32,6 +32,12 @@ html {
   scroll-behavior: auto;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 html,
 body {
   background: var(--ink);
@@ -75,18 +81,114 @@ button {
   transform: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* Hidden start state only when scripting can run the reveal. No-JS and
+   reduced-motion stay fully visible. Transform and opacity only, so layout
+   does not shift. The transition is armed one frame after the hide so the
+   entrance runs, and the hide itself does not fade. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
   .reveal[data-pending="true"] {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
+  }
+
+  .reveal[data-ready="true"] {
+    transition:
+      opacity 0.7s var(--ease-out) var(--reveal-delay, 0s),
+      transform 0.7s var(--ease-out) var(--reveal-delay, 0s);
   }
 
   .reveal.is-in {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+  }
+
+  .hero-enter > * {
+    animation: hero-rise 0.7s var(--ease-out) both;
+  }
+
+  .hero-enter > *:nth-child(1) { animation-delay: 0.04s; }
+  .hero-enter > *:nth-child(2) { animation-delay: 0.12s; }
+  .hero-enter > *:nth-child(3) { animation-delay: 0.2s; }
+  .hero-enter > *:nth-child(4) { animation-delay: 0.28s; }
+  .hero-enter > *:nth-child(5) { animation-delay: 0.36s; }
+  .hero-enter > *:nth-child(6) { animation-delay: 0.44s; }
+
+  a,
+  button {
     transition:
-      opacity 0.7s var(--ease-out),
-      transform 0.7s var(--ease-out);
+      color 0.2s var(--ease-out),
+      background-color 0.2s var(--ease-out),
+      border-color 0.2s var(--ease-out);
+  }
+
+  .btn-motion {
+    transition:
+      color 0.2s var(--ease-out),
+      background-color 0.2s var(--ease-out),
+      border-color 0.2s var(--ease-out),
+      translate 0.2s var(--ease-out),
+      box-shadow 0.2s var(--ease-out);
+  }
+
+  .btn-motion:hover {
+    translate: 0 -2px;
+    box-shadow: 0 8px 16px rgba(23, 21, 15, 0.16);
+  }
+
+  .btn-motion:active {
+    translate: 0 0;
+    box-shadow: none;
+    transition-duration: 0.01s;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .plate,
+  .card-motion {
+    transition:
+      translate 0.28s var(--ease-out),
+      box-shadow 0.28s var(--ease-out);
+  }
+
+  .reveal[data-ready="true"].plate,
+  .reveal[data-ready="true"].card-motion {
+    transition:
+      opacity 0.7s var(--ease-out) var(--reveal-delay, 0s),
+      transform 0.7s var(--ease-out) var(--reveal-delay, 0s),
+      translate 0.28s var(--ease-out),
+      box-shadow 0.28s var(--ease-out);
+  }
+
+  .plate:hover,
+  .card-motion:hover {
+    translate: 0 -4px;
+    box-shadow: 0 14px 28px rgba(23, 21, 15, 0.1);
+  }
+
+  .plate > .relative,
+  .photo-tile {
+    overflow: hidden;
+  }
+
+  .plate img,
+  .photo-tile img {
+    transition: transform 0.7s var(--ease-out);
+  }
+
+  .plate:hover img,
+  .photo-tile:hover img {
+    transform: scale(1.03);
   }
 }
 

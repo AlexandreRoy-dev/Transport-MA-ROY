@@ -7,7 +7,7 @@ type CtaLinkProps = {
 };
 
 export const ctaBase =
-  "inline-flex min-h-12 items-center justify-center px-6 text-[0.8rem] font-semibold tracking-[0.12em] uppercase transition-colors duration-200";
+  "btn-motion inline-flex min-h-12 items-center justify-center px-6 text-[0.8rem] font-semibold tracking-[0.12em] uppercase";
 export const ctaStyles = {
   solid: "bg-corten text-white hover:bg-corten-deep",
   ghost: "border border-paper/30 text-paper hover:border-paper",

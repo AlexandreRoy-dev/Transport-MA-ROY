@@ -12,7 +12,7 @@ export function CallButton({ variant = "solid", size = "md", className = "" }: C
   return (
     <a
       href={PHONE_TEL}
-      className={`inline-flex items-center justify-center gap-2 font-semibold tracking-[0.04em] whitespace-nowrap transition-colors duration-200 ${sizing} ${styles} ${className}`}
+      className={`btn-motion inline-flex items-center justify-center gap-2 font-semibold tracking-[0.04em] whitespace-nowrap ${sizing} ${styles} ${className}`}
     >
       <svg aria-hidden="true" viewBox="0 0 24 24" className="h-[1.1em] w-[1.1em]" fill="currentColor">
         <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z" />

@@ -20,7 +20,7 @@ export default async function AboutPage({
 
   return (
     <>
-      <section className="site-grid py-20 md:py-28">
+      <section className="hero-enter site-grid py-20 md:py-28">
         <h1 className="max-w-[16ch] text-[clamp(2.6rem,6vw,4.4rem)] uppercase">
           {t("title")}
         </h1>
