@@ -14,12 +14,7 @@ export async function generateMetadata() {
 
 const HERO_IMG = "/media/hero-conteneur-40-pieds-vert-ovl-sans-logo-1284.webp";
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: AppLocale }>;
-}) {
-  const { locale } = await params;
+export async function HomeContent({ locale }: { locale: AppLocale }) {
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const products = [
@@ -158,4 +153,13 @@ export default async function HomePage({
       </section>
     </>
   );
+}
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: AppLocale }>;
+}) {
+  const { locale } = await params;
+  return <HomeContent locale={locale} />;
 }
