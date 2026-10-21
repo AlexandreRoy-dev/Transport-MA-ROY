@@ -19,6 +19,7 @@ export default async function ProductsPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("products");
+  const gallery = await getTranslations("gallery");
 
   const sizes = [
     {
@@ -96,7 +97,7 @@ export default async function ProductsPage({
         <div className="relative min-h-[300px]">
           <Image
             src="/media/yard-46.jpg"
-            alt=""
+            alt={gallery("altRollup")}
             fill
             className="object-cover"
             sizes="(min-width: 768px) 50vw, 100vw"

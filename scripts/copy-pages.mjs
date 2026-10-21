@@ -15,6 +15,8 @@ const targets = [
   "_next",
   "media",
   "brand",
+  "robots.txt",
+  "sitemap.xml",
 ];
 
 if (!existsSync(from)) {

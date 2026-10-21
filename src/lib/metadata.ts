@@ -1,42 +1,48 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
+import { languageAlternates, pageUrl, type PageKey } from "@/lib/urls";
 
-const OG_IMAGE = "/og/transport-ma-roy-partage-1200x630.jpg";
-const OG_ALT = {
-  fr: "Conteneur maritime de 40 pieds sur une remorque, avec le texte Conteneurs maritimes à vendre et à louer de Transport M-A Roy.",
-  en: "A 40 foot shipping container on a trailer, with the Transport M-A Roy text Shipping containers for sale and rent.",
-};
+const OG_IMAGE = "https://transportmar.ca/og/transport-ma-roy-partage-1200x630.jpg";
 
-export async function pageMeta(
-  key:
-    | "home"
-    | "services"
-    | "products"
-    | "about"
-    | "contact"
-    | "privacy",
-) {
+export async function pageMeta(key: PageKey): Promise<Metadata> {
   const t = await getTranslations("meta");
-  const titleKey = `${key}Title` as const;
-  const descriptionKey = `${key}Description` as const;
-
   const locale = await getLocale();
   const isEn = locale === "en";
+  const title = t(`${key}Title`);
+  const description = t(`${key}Description`);
+  const url = pageUrl(locale, key);
+  const imageAlt = t("ogImageAlt");
 
   return {
-    title: t(titleKey),
-    description: t(descriptionKey),
+    title,
+    description,
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: url,
+      languages: languageAlternates(key),
+    },
     openGraph: {
       type: "website",
+      url,
+      title,
+      description,
       siteName: "Transport M-A Roy",
       locale: isEn ? "en_CA" : "fr_CA",
+      alternateLocale: isEn ? ["fr_CA"] : ["en_CA"],
       images: [
         {
           url: OG_IMAGE,
           width: 1200,
           height: 630,
-          alt: isEn ? OG_ALT.en : OG_ALT.fr,
+          alt: imageAlt,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [OG_IMAGE],
     },
   };
 }

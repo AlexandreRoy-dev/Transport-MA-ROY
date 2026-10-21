@@ -17,6 +17,7 @@ export default async function AboutPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
+  const gallery = await getTranslations("gallery");
 
   return (
     <>
@@ -31,7 +32,7 @@ export default async function AboutPage({
       <div className="relative h-[46vw] min-h-64 max-h-[480px]">
         <Image
           src="/media/yard-45.jpg"
-          alt=""
+          alt={gallery("alt20Row")}
           fill
           className="object-cover object-bottom"
           sizes="100vw"
@@ -43,7 +44,7 @@ export default async function AboutPage({
         <div className="relative min-h-[240px]">
           <Image
             src="/media/yard-27.jpg"
-            alt=""
+            alt={gallery("altYard")}
             fill
             className="object-cover"
             sizes="(min-width: 768px) 50vw, 100vw"
@@ -52,7 +53,7 @@ export default async function AboutPage({
         <div className="relative min-h-[240px]">
           <Image
             src="/media/yard-36.jpg"
-            alt=""
+            alt={gallery("altReeferSite")}
             fill
             className="object-cover"
             sizes="(min-width: 768px) 50vw, 100vw"
