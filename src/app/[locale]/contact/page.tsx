@@ -18,7 +18,7 @@ export default async function ContactPage({
 
   return (
     <section className="site-grid grid gap-12 py-20 md:grid-cols-12 md:py-28">
-      <div className="md:col-span-5">
+      <div className="hero-enter md:col-span-5">
         <h1 className="text-[clamp(2.6rem,6vw,4.4rem)] uppercase">{t("title")}</h1>
         <p className="measure mt-5 text-dust">{t("lead")}</p>
         <dl className="mt-10 space-y-5">
@@ -58,7 +58,7 @@ export default async function ContactPage({
           </div>
         </dl>
       </div>
-      <div className="md:col-span-7">
+      <div className="hero-enter md:col-span-7">
         <QuoteForm />
       </div>
     </section>

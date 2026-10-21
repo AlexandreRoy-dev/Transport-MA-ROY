@@ -164,7 +164,7 @@ export function QuoteForm() {
 
       <button
         type="submit"
-        className="mt-6 inline-flex min-h-12 items-center bg-corten px-6 text-[0.8rem] font-semibold tracking-[0.14em] uppercase text-white transition-colors duration-200 hover:bg-corten-deep"
+        className="btn-motion mt-6 inline-flex min-h-12 items-center bg-corten px-6 text-[0.8rem] font-semibold tracking-[0.14em] uppercase text-white hover:bg-corten-deep"
       >
         {t("submit")}
       </button>

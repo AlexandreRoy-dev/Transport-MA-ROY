@@ -20,8 +20,8 @@ export async function PhotoGrid() {
           {homeGallery.map((photo, index) => (
             <Reveal
               key={photo.src}
-              delay={0}
-              className="relative aspect-[4/3] overflow-hidden"
+              delay={(index % 4) * 0.12}
+              className="photo-tile relative aspect-[4/3] overflow-hidden"
             >
               <Image
                 src={photo.src}

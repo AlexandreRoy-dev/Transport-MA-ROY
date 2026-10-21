@@ -53,7 +53,7 @@ export default async function ProductsPage({
 
   return (
     <>
-      <section className="site-grid py-20 md:py-28">
+      <section className="hero-enter site-grid py-20 md:py-28">
         <h1 className="max-w-[12ch] text-[clamp(2.6rem,6vw,4.4rem)] uppercase">
           {t("title")}
         </h1>
@@ -64,7 +64,7 @@ export default async function ProductsPage({
         {sizes.map((size, index) => (
           <Reveal
             key={size.title}
-            delay={(index % 2) * 0.2}
+            delay={(index % 2) * 0.3}
             className="plate flex flex-col"
           >
             <div className="relative aspect-[16/10]">
@@ -102,7 +102,7 @@ export default async function ProductsPage({
             sizes="(min-width: 768px) 50vw, 100vw"
           />
         </div>
-        <div className="bg-paper px-6 py-16 text-ink md:px-12">
+        <Reveal className="bg-paper px-6 py-16 text-ink md:px-12">
           <h2 className="font-display text-[clamp(2rem,4vw,3.2rem)] uppercase">
             {t("conditionTitle")}
           </h2>
@@ -120,7 +120,7 @@ export default async function ProductsPage({
               <p className="mt-2 text-ink-soft">{t("modifiedBody")}</p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="bg-[#0f0e0c] text-white">
@@ -129,9 +129,9 @@ export default async function ProductsPage({
             {t("usesTitle")}
           </h2>
           <ul className="mt-8 grid gap-4 md:grid-cols-3">
-            <li className="border-t-2 border-corten pt-4 text-white/80">{t("useStorage")}</li>
-            <li className="border-t-2 border-corten pt-4 text-white/80">{t("useSite")}</li>
-            <li className="border-t-2 border-corten pt-4 text-white/80">{t("useFarm")}</li>
+            <Reveal as="li" className="card-motion border-t-2 border-corten pt-4 text-white/80">{t("useStorage")}</Reveal>
+            <Reveal as="li" delay={0.3} className="card-motion border-t-2 border-corten pt-4 text-white/80">{t("useSite")}</Reveal>
+            <Reveal as="li" delay={0.6} className="card-motion border-t-2 border-corten pt-4 text-white/80">{t("useFarm")}</Reveal>
           </ul>
           <div className="mt-12">
             <CallButton />
