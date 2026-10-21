@@ -2,16 +2,16 @@
   "meta": {
     "siteName": "Transport M-A Roy",
     "ogImageAlt": "A 40 foot shipping container on a trailer, with the Transport M-A Roy text Shipping containers for sale and rent.",
-    "homeTitle": "20' and 40' shipping containers for sale | Eastern Townships and Quebec",
-    "homeDescription": "Transport M-A Roy sells 20' and 40' shipping containers from Cookshire-Eaton. Rental also available. Eastern Townships specialist, delivery anywhere in Quebec.",
-    "servicesTitle": "Services | Transport M-A Roy",
-    "servicesDescription": "Sale, rental, modification, and delivery of shipping containers, including refrigerated and insulated units.",
-    "productsTitle": "Products | Transport M-A Roy",
-    "productsDescription": "20-foot, 40-foot, 40-foot side-door, and refrigerated containers, new or used, with door and other modifications available.",
-    "aboutTitle": "About | Transport M-A Roy",
-    "aboutDescription": "Company founded in 2020 in Sherbrooke, with a commercial yard on Route 108 in Cookshire-Eaton since 2023.",
-    "contactTitle": "Contact and quote | Transport M-A Roy",
-    "contactDescription": "Write to info@transportmar.ca or call 819 578-3441 for a container quote.",
+    "homeTitle": "Shipping containers for sale and rent in Quebec | Transport M-A Roy",
+    "homeDescription": "Sale and rental of 20' and 40' shipping containers from Cookshire-Eaton, in the Eastern Townships. New or used. Delivery anywhere in Quebec.",
+    "servicesTitle": "Container sale, rental and delivery | Transport M-A Roy",
+    "servicesDescription": "Sale, rental, modification and delivery of shipping containers in the Eastern Townships, including refrigerated and insulated units.",
+    "productsTitle": "20 and 40 foot containers for sale or rent | Transport M-A Roy",
+    "productsDescription": "20-foot, 40-foot, side-door and refrigerated containers. New or used, for sale or rent, delivered across Quebec.",
+    "aboutTitle": "About Transport M-A Roy | Containers in the Eastern Townships",
+    "aboutDescription": "Company founded in 2020 in Sherbrooke. Commercial yard on Route 108 in Cookshire-Eaton since 2023.",
+    "contactTitle": "Shipping container quote | Transport M-A Roy",
+    "contactDescription": "Write to info@transportmar.ca or call 819 578-3441. Yard on Route 108 in Cookshire-Eaton. The price includes delivery.",
     "privacyTitle": "Privacy | Transport M-A Roy",
     "privacyDescription": "How Transport M-A Roy handles your personal information."
   },
@@ -81,7 +81,7 @@
     "heroKicker": "Eastern Townships and Quebec",
     "priceCta": "Ask for a price",
     "callShort": "Call",
-    "galleryAlt": "Row of 20 foot containers set up on a lawn",
+    "galleryAlt": "Green shipping container on a trailer in the yard",
     "heroRent": "Rental also available.",
     "offerLead": "Buy, rent or modify: we work with you to find the solution that fits your project, your site and your budget.",
     "alt20Card": "White 20 ft shipping container set up on a paved lot"
@@ -109,7 +109,8 @@
     "modifyPoint1": "Garage / roll-up doors on the side or the end",
     "modifyPoint2": "Useful for frequent access, equipment, and vehicles",
     "modifyPoint3": "Specified on the quote for the container you choose",
-    "cta": "Ask for a price"
+    "cta": "Ask for a price",
+    "altBand": "20 foot containers in the storage yard"
   },
   "products": {
     "title": "20', 40', and refrigerated containers",
@@ -139,7 +140,12 @@
     "sizeSideBody": "A 40 foot that opens along the side. Reach everything without emptying the container from the end.",
     "sizeSideSpec": "Side doors · access along the full length",
     "priceCta": "Ask for a price",
-    "callShort": "Call"
+    "callShort": "Call",
+    "alt20": "20 foot containers in the storage yard",
+    "alt40": "40 foot shipping container loaded on a trailer, ready for delivery",
+    "altSide": "Black 40 foot container with side doors",
+    "altReefer": "Refrigerated container on a trailer",
+    "altModified": "Beige modified container with a roll-up door, on a trailer"
   },
   "about": {
     "title": "Transport M-A Roy, since 2020",
@@ -151,7 +157,10 @@
     "promiseTitle": "Who we work with",
     "promiseBody": "Businesses, construction, households, farmers, and maple operations. When the project needs it, we sell insulated refrigerated containers most of all.",
     "cta": "Ask for a price",
-    "lead2": "Today we sell, rent and modify shipping containers for businesses, contractors, homeowners, farmers and maple producers, with the direct service of a local company. Eastern Townships specialists, we deliver anywhere in Quebec."
+    "lead2": "Today we sell, rent and modify shipping containers for businesses, contractors, homeowners, farmers and maple producers, with the direct service of a local company. Eastern Townships specialists, we deliver anywhere in Quebec.",
+    "altHero": "Green shipping container on a trailer in the yard",
+    "altYard": "Grey container on a trailer in front of roll-up doors",
+    "altPair": "White refrigerated container and green container, delivered side by side"
   },
   "contact": {
     "title": "Ask for a price",
@@ -227,11 +236,11 @@
     "altReefer": "White Triton refrigerated container on a trailer",
     "alt20Home": "20-foot container installed in a residential driveway",
     "altModified20": "20-foot container modified with roll-up doors",
-    "altYard": "Container yard with a green unit on a trailer",
-    "altReeferSite": "Refrigerated container and standard container delivered at a woodlot",
+    "altYard": "Grey container on a trailer in front of roll-up doors",
+    "altReeferSite": "White refrigerated container and green container, delivered side by side",
     "altTruck": "Red delivery truck with a container on the trailer",
-    "alt20Row": "Row of four 20-foot containers installed on a lawn",
-    "altRollup": "Modified container with two side roll-up doors",
+    "alt20Row": "Green shipping container on a trailer in the yard",
+    "altRollup": "Beige modified container with a roll-up door, on a trailer",
     "altRollupTrailer": "Cream container with a roll-up door, on a trailer",
     "altUsedFarm": "Used blue container installed at a field edge"
   },

@@ -27,6 +27,7 @@ export default async function ProductsPage({
       spec: t("size20Spec"),
       mark: "20'",
       image: "/media/conteneurs-20-pieds-cour-entreposage-800.webp",
+      alt: t("alt20"),
     },
     {
       title: t("size40Title"),
@@ -34,6 +35,7 @@ export default async function ProductsPage({
       spec: t("size40Spec"),
       mark: "40'",
       image: CARD_40_IMG,
+      alt: t("alt40"),
     },
     {
       title: t("sizeSideTitle"),
@@ -41,6 +43,7 @@ export default async function ProductsPage({
       spec: t("sizeSideSpec"),
       mark: "40'",
       image: "/media/conteneur-40-pieds-portes-laterales-noir-1600.webp",
+      alt: t("altSide"),
     },
     {
       title: t("sizeReeferTitle"),
@@ -48,6 +51,7 @@ export default async function ProductsPage({
       spec: t("sizeReeferSpec"),
       mark: "RF",
       image: "/media/conteneur-refrigere-40-pieds-remorque-800.webp",
+      alt: t("altReefer"),
     },
   ];
 
@@ -68,9 +72,9 @@ export default async function ProductsPage({
             className="plate flex flex-col"
           >
             <div className="relative aspect-[16/10]">
-              {size.image === CARD_40_IMG ? <Card40Picture alt={size.title} /> : <Image
+              {size.image === CARD_40_IMG ? <Card40Picture alt={size.alt} /> : <Image
                 src={size.image}
-                alt={size.title}
+                alt={size.alt}
                 fill
                 className={size.mark === "RF" ? "object-cover object-top" : "object-cover"}
                 sizes="(min-width: 768px) 50vw, 100vw"
@@ -96,7 +100,7 @@ export default async function ProductsPage({
         <div className="relative min-h-[300px]">
           <Image
             src="/media/yard-46.jpg"
-            alt=""
+            alt={t("altModified")}
             fill
             className="object-cover"
             sizes="(min-width: 768px) 50vw, 100vw"

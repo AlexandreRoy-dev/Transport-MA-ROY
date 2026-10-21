@@ -53,7 +53,7 @@ export default async function ServicesPage({
       <div className="relative h-[42vw] min-h-56 max-h-[420px]">
         <Image
           src="/media/conteneurs-20-pieds-cour-entreposage-1600.webp"
-          alt=""
+          alt={t("altBand")}
           fill
           className="object-cover"
           sizes="100vw"

@@ -31,7 +31,7 @@ export default async function AboutPage({
       <div className="relative h-[46vw] min-h-64 max-h-[480px]">
         <Image
           src="/media/yard-45.jpg"
-          alt=""
+          alt={t("altHero")}
           fill
           className="object-cover object-bottom"
           sizes="100vw"
@@ -43,7 +43,7 @@ export default async function AboutPage({
         <div className="relative min-h-[240px]">
           <Image
             src="/media/yard-27.jpg"
-            alt=""
+            alt={t("altYard")}
             fill
             className="object-cover"
             sizes="(min-width: 768px) 50vw, 100vw"
@@ -52,7 +52,7 @@ export default async function AboutPage({
         <div className="relative min-h-[240px]">
           <Image
             src="/media/yard-36.jpg"
-            alt=""
+            alt={t("altPair")}
             fill
             className="object-cover"
             sizes="(min-width: 768px) 50vw, 100vw"

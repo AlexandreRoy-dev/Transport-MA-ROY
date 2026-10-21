@@ -2,16 +2,16 @@
   "meta": {
     "siteName": "Transport M-A Roy",
     "ogImageAlt": "Conteneur maritime de 40 pieds sur une remorque, avec le texte Conteneurs maritimes à vendre et à louer de Transport M-A Roy.",
-    "homeTitle": "Vente de conteneurs maritimes 20' et 40' | Estrie et Québec",
-    "homeDescription": "Transport M-A Roy vend des conteneurs maritimes 20' et 40' depuis Cookshire-Eaton. Location aussi offerte. Spécialiste Estrie, livraison partout au Québec.",
-    "servicesTitle": "Services | Transport M-A Roy",
-    "servicesDescription": "Vente, location, modification et livraison de conteneurs maritimes, y compris les modèles réfrigérés et isolés.",
-    "productsTitle": "Produits | Transport M-A Roy",
-    "productsDescription": "Conteneurs 20 pieds, 40 pieds, 40 pieds avec portes latérales et réfrigérés, neufs ou usagés, avec portes et modifications possibles.",
-    "aboutTitle": "À propos | Transport M-A Roy",
-    "aboutDescription": "Entreprise fondée en 2020 à Sherbrooke, cour commerciale sur la route 108 à Cookshire-Eaton depuis 2023.",
-    "contactTitle": "Contact et devis | Transport M-A Roy",
-    "contactDescription": "Écrivez à info@transportmar.ca ou appelez le 819 578-3441 pour un devis de conteneur.",
+    "homeTitle": "Vente et location de conteneurs maritimes en Estrie | Transport M-A Roy",
+    "homeDescription": "Vente et location de conteneurs maritimes 20' et 40' depuis Cookshire-Eaton, en Estrie. Neufs ou usagés, livrés partout au Québec.",
+    "servicesTitle": "Vente, location et livraison de conteneurs | Transport M-A Roy",
+    "servicesDescription": "Vente, location, modification et livraison de conteneurs maritimes en Estrie, y compris les modèles réfrigérés et isolés.",
+    "productsTitle": "Conteneurs 20 et 40 pieds à vendre ou à louer | Transport M-A Roy",
+    "productsDescription": "Conteneurs 20 pieds, 40 pieds, portes latérales et réfrigérés. Neufs ou usagés, à vendre ou à louer, livrés au Québec.",
+    "aboutTitle": "Transport M-A Roy, conteneurs maritimes en Estrie",
+    "aboutDescription": "Entreprise fondée en 2020 à Sherbrooke. Cour commerciale sur la route 108 à Cookshire-Eaton depuis 2023.",
+    "contactTitle": "Devis de conteneur maritime | Transport M-A Roy",
+    "contactDescription": "Écrivez à info@transportmar.ca ou appelez le 819 578-3441. Cour sur la route 108 à Cookshire-Eaton. Le prix inclut la livraison.",
     "privacyTitle": "Confidentialité | Transport M-A Roy",
     "privacyDescription": "Comment Transport M-A Roy traite vos renseignements personnels."
   },
@@ -81,7 +81,7 @@
     "heroKicker": "Estrie, partout au Québec",
     "priceCta": "Demander un prix",
     "callShort": "Appeler",
-    "galleryAlt": "Rangée de conteneurs 20 pieds installés sur une pelouse",
+    "galleryAlt": "Conteneur maritime vert sur une remorque dans la cour",
     "heroRent": "",
     "offerLead": "Acheter, louer ou transformer : on trouve avec vous la solution qui colle à votre projet, à votre terrain et à votre budget.",
     "alt20Card": "Conteneur maritime 20 pieds blanc installé sur un terrain asphalté"
@@ -109,7 +109,8 @@
     "modifyPoint1": "Portes de garage ou à enroulement, sur le côté ou en bout",
     "modifyPoint2": "Utile pour l’accès fréquent, le matériel et les véhicules",
     "modifyPoint3": "À préciser au devis selon le conteneur choisi",
-    "cta": "Demander un prix"
+    "cta": "Demander un prix",
+    "altBand": "Conteneurs 20 pieds dans la cour d'entreposage"
   },
   "products": {
     "title": "Un conteneur pour chaque besoin",
@@ -139,7 +140,12 @@
     "sizeSideBody": "Tout à portée de main. Ses portes s'ouvrent sur le côté : fini de tout sortir pour atteindre la palette du fond. Parfait pour l'outillage, l'inventaire ou l'équipement que vous utilisez souvent.",
     "sizeSideSpec": "Portes sur le côté, accès sur toute la longueur",
     "priceCta": "Demander un prix",
-    "callShort": "Appeler"
+    "callShort": "Appeler",
+    "alt20": "Conteneurs 20 pieds dans la cour d'entreposage",
+    "alt40": "Conteneur maritime de 40 pieds chargé sur une remorque, prêt pour la livraison",
+    "altSide": "Conteneur 40 pieds noir avec portes latérales",
+    "altReefer": "Conteneur réfrigéré sur une remorque",
+    "altModified": "Conteneur beige modifié avec une porte à enroulement, sur une remorque"
   },
   "about": {
     "title": "Né sur les chantiers de l'Estrie",
@@ -151,7 +157,10 @@
     "promiseTitle": "La clientèle",
     "promiseBody": "Entreprises, construction, particuliers, agriculteurs et gens en acériculture. On leur vend surtout des conteneurs réfrigérés isolés quand le projet le demande.",
     "cta": "Demander un prix",
-    "lead2": "Aujourd'hui, on vend, loue et modifie des conteneurs maritimes pour les entreprises, les entrepreneurs, les particuliers, les agriculteurs et les acériculteurs, avec le service direct d'une entreprise d'ici. Spécialistes de l'Estrie, on livre partout au Québec."
+    "lead2": "Aujourd'hui, on vend, loue et modifie des conteneurs maritimes pour les entreprises, les entrepreneurs, les particuliers, les agriculteurs et les acériculteurs, avec le service direct d'une entreprise d'ici. Spécialistes de l'Estrie, on livre partout au Québec.",
+    "altHero": "Conteneur maritime vert sur une remorque dans la cour",
+    "altYard": "Conteneur gris sur une remorque devant des portes à enroulement",
+    "altPair": "Conteneur réfrigéré blanc et conteneur vert, livrés côte à côte"
   },
   "contact": {
     "title": "Obtenez votre prix, livraison incluse",
@@ -227,11 +236,11 @@
     "altReefer": "Conteneur réfrigéré blanc Triton sur remorque",
     "alt20Home": "Conteneur 20 pieds installé dans une entrée résidentielle",
     "altModified20": "Conteneur 20 pieds modifié avec portes à enroulement",
-    "altYard": "Cour de conteneurs, unité verte sur remorque",
-    "altReeferSite": "Conteneur réfrigéré et conteneur standard livrés en bord de bois",
+    "altYard": "Conteneur gris sur une remorque devant des portes à enroulement",
+    "altReeferSite": "Conteneur réfrigéré blanc et conteneur vert, livrés côte à côte",
     "altTruck": "Camion rouge de livraison avec un conteneur sur la remorque",
-    "alt20Row": "Rangée de quatre conteneurs 20 pieds installés sur une pelouse",
-    "altRollup": "Conteneur modifié avec deux portes à enroulement latérales",
+    "alt20Row": "Conteneur maritime vert sur une remorque dans la cour",
+    "altRollup": "Conteneur beige modifié avec une porte à enroulement, sur une remorque",
     "altRollupTrailer": "Conteneur crème avec porte à enroulement, sur remorque",
     "altUsedFarm": "Conteneur usagé bleu installé en bord de champ"
   },

@@ -10,6 +10,8 @@ const targets = [
   "CNAME",
   "favicon.ico",
   "favicon.svg",
+  "robots.txt",
+  "sitemap.xml",
   "fr",
   "en",
   "_next",
