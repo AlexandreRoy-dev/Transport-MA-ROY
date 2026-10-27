@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          NEXT_PUBLIC_SOUMISSION_ENDPOINT: ${{ vars.SOUMISSION_ENDPOINT }}
+          NEXT_PUBLIC_SOUMISSION_ENDPOINT: ${{ vars.SOUMISSION_ENDPOINT || 'https://services.leadconnectorhq.com/hooks/HRdkWzUNYVWu7n0NJeJh/webhook-trigger/f268c1e5-78e5-41ff-a286-e8c7dee2699a' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
