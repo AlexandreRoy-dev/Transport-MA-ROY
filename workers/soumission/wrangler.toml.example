@@ -1,0 +1,12 @@
+name = "transportmar-soumission"
+main = "worker.js"
+compatibility_date = "2026-10-27"
+
+# Essaie d'abord sur *.workers.dev. Pour un domaine à vous, ajoutez une route
+# qui expose /api/soumission, par exemple :
+# routes = [
+#   { pattern = "soumission.transportmar.ca/*", zone_name = "transportmar.ca" }
+# ]
+
+# Le secret ne va pas dans ce fichier.
+#   npx wrangler secret put GHL_WEBHOOK_URL
