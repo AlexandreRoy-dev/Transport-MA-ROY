@@ -81,13 +81,25 @@ export default {
       return json({ error: "Transmission impossible" }, 502, headers);
     }
 
-    if (!upstream.ok) {
+    if (await upstreamFailed(upstream)) {
       return json({ error: "Transmission refusée" }, 502, headers);
     }
 
     return json({ ok: true }, 200, headers);
   },
 };
+
+async function upstreamFailed(response) {
+  if (!response.ok) return true;
+  const text = await response.text();
+  if (!text.trim()) return false;
+  try {
+    const data = JSON.parse(text);
+    return Boolean(data && typeof data.status === "string" && data.status.startsWith("Error"));
+  } catch {
+    return false;
+  }
+}
 
 function validate(data) {
   if (!data || typeof data !== "object" || Array.isArray(data)) return null;

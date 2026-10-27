@@ -2,7 +2,9 @@
 
 Worker Cloudflare optionnel. Le site reste un export statique. Next.js ne compile pas ce dossier, et le lint l'ignore.
 
-Le formulaire envoie un JSON à `POST /api/soumission`. Le worker vérifie les champs, puis le transmet à GoHighLevel. L'URL du webhook est le secret `GHL_WEBHOOK_URL`. Elle n'est pas dans le dépôt.
+Le formulaire envoie un JSON (`Content-Type: application/json`) à `POST /api/soumission`. Le navigateur envoie d'abord `OPTIONS`. Le worker vérifie les champs, puis transmet le JSON à GoHighLevel. L'URL du webhook est le secret `GHL_WEBHOOK_URL`. Elle n'est pas dans le dépôt.
+
+GoHighLevel peut répondre 200 avec un champ `status` qui commence par `Error`. Le worker traite cette réponse comme un échec.
 
 Origines acceptées : `https://transportmar.ca` et `https://www.transportmar.ca`. Les autres reçoivent un refus. `OPTIONS` répond avec les en-têtes CORS.
 

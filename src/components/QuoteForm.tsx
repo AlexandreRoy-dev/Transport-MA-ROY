@@ -52,28 +52,32 @@ function splitName(name: string) {
   return { first_name, last_name: rest.join(" "), full_name };
 }
 
-async function postSoumission(endpoint: string, payload: LeadPayload) {
-  const body = JSON.stringify(payload);
-  const headers = { "Content-Type": "text/plain;charset=UTF-8" };
+function statusIsError(data: unknown) {
+  if (!data || typeof data !== "object" || !("status" in data)) return false;
+  const status = (data as { status?: unknown }).status;
+  return typeof status === "string" && status.startsWith("Error");
+}
 
+async function postSoumission(endpoint: string, payload: LeadPayload) {
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+    signal: AbortSignal.timeout(TIMEOUT_MS),
+  });
+
+  if (!response.ok) throw new Error(String(response.status));
+
+  const text = await response.text();
+  if (!text.trim()) return;
+
+  let data: unknown;
   try {
-    const response = await fetch(endpoint, {
-      method: "POST",
-      headers,
-      body,
-      signal: AbortSignal.timeout(TIMEOUT_MS),
-    });
-    if (!response.ok) throw new Error(String(response.status));
-  } catch (error) {
-    if (!(error instanceof TypeError)) throw error;
-    await fetch(endpoint, {
-      method: "POST",
-      mode: "no-cors",
-      headers,
-      body,
-      signal: AbortSignal.timeout(TIMEOUT_MS),
-    });
+    data = JSON.parse(text);
+  } catch {
+    return;
   }
+  if (statusIsError(data)) throw new Error("rejected");
 }
 
 export function QuoteForm() {
