@@ -42,3 +42,8 @@ next-env.d.ts
 
 # client email extracts (invoice + raw .msg dumps)
 /_extract-msg/
+
+# proxy Cloudflare local (le secret GHL ne doit pas être commité)
+/workers/soumission/wrangler.toml
+/workers/soumission/.dev.vars
+/workers/soumission/.wrangler/
